@@ -1,0 +1,17 @@
+index,label,phoneme1,phoneme2,phoneme3,phoneme4,phoneme5,phoneme6,phoneme7
+1,V,,,,V,,,
+2,CV,,,C,V,,,
+3,CCV,,C,C,V,,,
+4,CCCV,C,C,C,V,,,
+5,VC,,,,V,C,,
+6,CVC,,,C,V,C,,
+7,CCVC,,C,C,V,C,,
+8,CCCVC,C,C,C,V,C,,
+9,VCC,,,,V,C,C,
+10,CVCC,,,C,V,C,C,
+11,CCVCC,,C,C,V,C,C,
+12,CCCVCC,C,C,C,V,C,C,
+13,VCCC,,,,V,C,C,C
+14,CVCCC,,,C,V,C,C,C
+15,CCVCCC,,C,C,V,C,C,C
+16,CCCVCCC,C,C,C,V,C,C,C

@@ -1,0 +1,8 @@
+#phonemes
+2 t 
+3 r s d jh 
+4 ae eh ah eh 
+5 n n n 
+6 t 
+#frames
+CCVC CVC CVCC CV 
