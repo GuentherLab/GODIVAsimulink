@@ -20,13 +20,18 @@ function godiva_displaystatus(block)
   switch(block.DialogPrm(1).Data)
       case 'IFS'
           labels=GODIVA_x.network.phonemes.labels;
-          pos=[.83,.56,.15,.23];
+          pos=[.83,.63,.15,.16];
       case 'PreSMA'
           labels=GODIVA_x.network.frames.labels;
-          pos=[.83,.28,.15,.23];
+          pos=[.83,.42,.15,.16];
       case 'SSM'
           labels=GODIVA_x.network.productions.labels;
-          pos=[.83,.0,.15,.23];
+          pos=[.83,.21,.15,.16];
+      case 'SMA'
+          labels=GODIVA_x.network.productions.labels;
+          pos=[.83,.0,.15,.16];
+      otherwise
+          error('unrecognized block name %s',block.DialogPrm(1).Data);
   end
   idxmax1=accumarray(columns,M2,[],@max,nan);
   idxmax2=M2==idxmax1(columns)&M2>0;

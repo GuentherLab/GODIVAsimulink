@@ -7,5 +7,7 @@ godiva_display('PreSMA','PlanCells');
 godiva_display('PreSMA','ChoiceCells');
 godiva_display('SSM','PlanCells');
 godiva_display('SSM','ChoiceCells');
+godiva_display('SMA','PlanCells');
+godiva_display('SMA','ChoiceCells');
 
 
