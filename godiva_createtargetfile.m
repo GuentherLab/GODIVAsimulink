@@ -2,10 +2,11 @@ function godiva_createtargetfile
 global GODIVA_x;
 
 % loads network information
-[a,b,c]=textread('godiva_phonemes.csv','%n%s%s%*[^\n]','delimiter',',','headerlines',1);
+[a,b,d,c]=textread('godiva_phonemes.csv','%n%s%s%s%*[^\n]','delimiter',',','headerlines',1);
 idx=find(a);
 GODIVA_x.network.phonemes.index=a(idx);
 GODIVA_x.network.phonemes.labels=b(idx);
+GODIVA_x.network.phonemes.labels_ipa=d(idx);
 GODIVA_x.network.phonemes.phonemetypes=c(idx);
 
 [a,b,c1,c2,c3,c4,c5,c6,c7]=textread('godiva_frames.csv','%n%s%s%s%s%s%s%s%s%*[^\n]','delimiter',',','headerlines',1);

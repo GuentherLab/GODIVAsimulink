@@ -1,49 +1,51 @@
-index,label,type,examples
-1,ae,V,"pat, lad, cat, ran"
-2,ey,V,"pay, day"
-3,ehr,V,"care, hair, there"
-4,aa,V,"father, palm"
-5,aar,V,arm
-6,eh,V,"let, head"
-7,iy,V,"bee, see"
-8,ih,V,"pit, city"
-9,ay,V,"pie, by, my"
-10,ihr,V,"pier, near, here"
-11,aa,V,"pot, not, wasp"
-12,ow,V,"toe, no"
-13,ao,V,"caught, paw"
-14,oy,V,"noise, boy"
-15,uh,V,"took, put"
-16,uhr,V,tour
-17,uw,V,"boot, soon, through"
-18,aw,V,"out, now"
-19,ah,V,"cut, run, enough"
-20,er,V,"urge, term, firm, word, heard, bird"
-21,ah,V,"about, item, gallop, circus"
-22,ah,V,"rabbit, edible, garbage"
-23,er,V,"butter, winner"
-24,yuw,V,pupil
-25,ch,C,church
-26,hh,C,hat
-27,jh,C,judge
-28,ng,C,thing
-29,sh,C,"ship, dish, ration"
-30,th,C,"thin, thigh, beneath"
-31,dh,C,"this, thy"
-32,y,C,yes
-33,zh,C,"vision, pleasure"
-34,b,C,
-35,d,C,
-36,f,C,
-37,g,C,
-38,k,C,
-39,l,C,
-40,m,C,
-41,n,C,
-42,p,C,
-43,r,C,
-44,s,C,
-45,t,C,
-46,v,C,
-47,w,C,
-48,z,C,
+index,arpabet,ipa,type,examples
+1,AA,ɑ,V,balm
+2,AE,æ,V,bat
+3,AH,ʌ,V,butt
+4,AO,ɔ,V,caught
+5,AW,aʊ,V,bout
+6,AX,ə,V,comma
+7,AXR,ɚ,V,letter
+8,AY,aɪ,V,bite
+9,EH,ɛ,V,bet
+10,ER,ɝ,V,bird
+11,EY,eɪ,V,bait
+12,IH,ɪ,V,bit
+13,IX,ɨ,V,rabbit
+14,IY,i,V,beat
+15,OW,oʊ,V,boat
+16,OY,ɔɪ,V,boy
+17,UH,ʊ,V,book
+18,UW,u,V,boot
+19,UX,ʉ,V,dude
+20,B,b,C,buy
+21,CH,tʃ,C,China
+22,D,d,C,die
+23,DH,ð,C,thy
+24,DX,ɾ,C,butter
+25,EL,l̩,C,bottle
+26,EM,m̩,C,rhythm
+27,EN,n̩,C,button
+28,F,f,C,fight
+29,G,ɡ,C,guy
+30,HH,h,C,high
+31,JH,dʒ,C,jive
+32,K,k,C,kite
+33,L,l,C,lie
+34,M,m,C,my
+35,N,n,C,nigh
+36,NG,ŋ,C,sing
+37,NX,ɾ̃,C,winner
+38,P,p,C,pie
+39,Q,ʔ,C,uh-oh
+40,R,ɹ,C,rye
+41,S,s,C,sigh
+42,SH,ʃ,C,shy
+43,T,t,C,tie
+44,TH,θ,C,thigh
+45,V,v,C,vie
+46,W,w,C,wise
+47,WH,ʍ,C,why
+48,Y,j,C,yacht
+49,Z,z,C,zoo
+50,ZH,ʒ,C,pleasure

@@ -18,16 +18,16 @@ function godiva_displaystatus(block)
   M2=block.Dwork(2).Data;
   columns=block.Dwork(3).Data;
   switch(block.DialogPrm(1).Data)
-      case 'IFS'
-          labels=GODIVA_x.network.phonemes.labels;
-          pos=[.83,.63,.15,.16];
       case 'PreSMA'
           labels=GODIVA_x.network.frames.labels;
+          pos=[.83,.63,.15,.16];
+      case 'IFS'
+          labels=GODIVA_x.network.phonemes.labels;
           pos=[.83,.42,.15,.16];
-      case 'SSM'
+      case 'SMA'
           labels=GODIVA_x.network.productions.labels;
           pos=[.83,.21,.15,.16];
-      case 'SMA'
+      case 'PMC'
           labels=GODIVA_x.network.productions.labels;
           pos=[.83,.0,.15,.16];
       otherwise

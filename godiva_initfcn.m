@@ -11,10 +11,11 @@ delete(findobj(0,'tag','godiva_display'));
 if ~strcmp(option,'full'), return; end
 hw=waitbar(0,'Initializing weights and target information','name','godiva');
 % loads network information
-[a,b,c]=textread('godiva_phonemes.csv','%n%s%s%*[^\n]','delimiter',',','headerlines',1);
+[a,b,d,c]=textread('godiva_phonemes.csv','%n%s%s%s%*[^\n]','delimiter',',','headerlines',1);
 idx=find(a);
 GODIVA_x.network.phonemes.index=a(idx);
 GODIVA_x.network.phonemes.labels=b(idx);
+GODIVA_x.network.phonemes.labels_ipa=d(idx);
 GODIVA_x.network.phonemes.phonemetypes=c(idx);
 
 [a,b,c1,c2,c3,c4,c5,c6,c7]=textread('godiva_frames.csv','%n%s%s%s%s%s%s%s%s%*[^\n]','delimiter',',','headerlines',1);
@@ -116,8 +117,8 @@ for n1=1:n_productions,
     if ~rem(n1,10),waitbar(n1/n_productions,hw);end
 end
 W=reshape(W,[n_phonemes*m_phonemes*n_positions,n_productions]);
-save('godiva_weights_IFS2FO.mat','W');
+save('godiva_weights_IFS2PMC.mat','W');
 W=W';
-save('godiva_weights_FO2IFS.mat','W');
+save('godiva_weights_PMC2IFS.mat','W');
 close(hw);    
 

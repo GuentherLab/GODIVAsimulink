@@ -78,13 +78,13 @@ if ncolumns>1, ylabel({'\fontsize{14}Activation','\fontsize{8}for each zone'});
 else ylabel('\fontsize{14}Activation'); end
 if size(x,2)>1,%strcmp(neuralpool,'PlanCells')||strcmp(neuralpool,'ChoiceCells')||inputnumber==1||inputnumber==2
     switch(region)
-        case 'IFS'
-            labels=GODIVA_x.network.phonemes.labels;
         case 'PreSMA'
             labels=GODIVA_x.network.frames.labels;
-        case 'SSM'
-            labels=GODIVA_x.network.productions.labels;
+        case 'IFS'
+            labels=GODIVA_x.network.phonemes.labels;
         case 'SMA'
+            labels=GODIVA_x.network.productions.labels;
+        case 'PMC'
             labels=GODIVA_x.network.productions.labels;
     end
     idxmax1=accumarray([repmat((1:size(x,1))',[size(x,2),1]),reshape(repmat(columns',[size(x,1),1]),[],1)],x0(:),[],@max,nan);
