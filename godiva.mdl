@@ -19,6 +19,7 @@ __MWOPC_PART_BEGIN__ /[Content_Types].xml
   <Override ContentType="application/vnd.mathworks.simulink.mf0+xml" PartName="/simulink/modelDictionary.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleCore+xml" PartName="/simulink/ScheduleCore.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.ScheduleEditor+xml" PartName="/simulink/ScheduleEditor.xml"/>
+  <Override ContentType="application/vnd.mathworks.stateflow.machine+xml" PartName="/simulink/stateflow/machine.xml"/>
   <Override ContentType="application/vnd.mathworks.simulink.blockDiagram+xml" PartName="/simulink/windowsInfo.xml"/>
 </Types>
 
@@ -42,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2011-03-06T23:44:35Z</dcterms:created>
   <dc:creator>alfnie</dc:creator>
   <cp:lastModifiedBy>alfnie</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-08-17T16:09:17Z</dcterms:modified>
-  <cp:revision>28.45</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-02-06T00:56:13Z</dcterms:modified>
+  <cp:revision>28.358</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -78,6 +79,7 @@ __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
   <Relationship Id="ScheduleCore" Target="ScheduleCore.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleCore"/>
   <Relationship Id="ScheduleEditor" Target="ScheduleEditor.xml" Type="http://schemas.mathworks.com/simulink/2013/relationships/ScheduleEditor"/>
   <Relationship Id="graphicalInterface" Target="graphicalInterface.xml" Type="http://schemas.mathworks.com/simulinkModel/2014/relationships/graphicalInterface"/>
+  <Relationship Id="stateflow_machine" Target="stateflow/machine.xml" Type="http://schemas.mathworks.com/simulinkModel/2014/relationships/stateflowMachine"/>
   <Relationship Id="system_root" Target="systems/system_root.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="windowsInfo" Target="windowsInfo.xml" Type="http://schemas.mathworks.com/simulinkModel/2019/relationships/windowsInfo"/>
 </Relationships>
@@ -115,8 +117,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">582660219</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:28.45&gt;</P>
+      <P Name="RTWModifiedTimeStamp">597549370</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:28.358&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -889,7 +891,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
     </Array>
     <P Name="Name">Configuration</P>
     <P Name="CurrentDlgPage">Diagnostics/Connectivity</P>
-    <P Name="ConfigPrmDlgPosition">[ 243, 69, 1123, 699 ]</P>
+    <P Name="ConfigPrmDlgPosition">[ 243, 71, 1123, 710 ]</P>
     <P Name="ExtraOptions">-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 </P>
   </Object>
 </ConfigSet>
@@ -919,7 +921,7 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
   <P Name="IsExportFunctionModel">0</P>
   <P Name="SimulinkSubDomainType">Simulink</P>
   <P Name="NumParameterArguments">0</P>
-  <P Name="NumExternalFileReferences">7</P>
+  <P Name="NumExternalFileReferences">10</P>
   <ExternalFileReference>
     <P Name="Reference">simulink/Logic and Bit
 Operations/Compare
@@ -934,6 +936,14 @@ Operations/Compare
 To Zero</P>
     <P Name="Path">$bdroot/(&apos;Word&apos; input)/RiseEdge filter./DetectRiseFromZero1/Compare To Zero</P>
     <P Name="SID">18</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="Path">$bdroot/(&apos;Word&apos; input)/RiseEdge filter.1/DetectRiseFromZero1/Compare To Zero</P>
+    <P Name="SID">274</P>
     <P Name="Type">LIBRARY_BLOCK</P>
   </ExternalFileReference>
   <ExternalFileReference>
@@ -956,16 +966,24 @@ To Zero</P>
     <P Name="Reference">simulink/Logic and Bit
 Operations/Compare
 To Zero</P>
-    <P Name="Path">$bdroot/RiseTransient Filter/DetectRiseFromZero1/Compare To Zero</P>
-    <P Name="SID">64</P>
+    <P Name="Path">$bdroot/Product1/Compare To Zero</P>
+    <P Name="SID">466</P>
     <P Name="Type">LIBRARY_BLOCK</P>
   </ExternalFileReference>
   <ExternalFileReference>
     <P Name="Reference">simulink/Logic and Bit
 Operations/Compare
 To Zero</P>
-    <P Name="Path">$bdroot/RiseTransient Filter1/DetectRiseFromZero1/Compare To Zero</P>
-    <P Name="SID">224</P>
+    <P Name="Path">$bdroot/Product2/Compare To Zero</P>
+    <P Name="SID">468</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="Path">$bdroot/RiseTransient Filter3/DetectRiseFromZero1/Compare To Zero</P>
+    <P Name="SID">372</P>
     <P Name="Type">LIBRARY_BLOCK</P>
   </ExternalFileReference>
   <ExternalFileReference>
@@ -976,40 +994,48 @@ To Zero</P>
     <P Name="SID">74</P>
     <P Name="Type">LIBRARY_BLOCK</P>
   </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="Path">$bdroot/timer/Detect DropToZero2/Compare To Zero</P>
+    <P Name="SID">445</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
   <P Name="OrderedModelArguments">1</P>
 </GraphicalInterface>
 
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="57176acc-434f-41c4-9bcc-996218bcca69">
-    <Interface type="Interface" uuid="02f88041-730e-4be7-91f8-1ea8a3a05704"/>
+  <System type="System" uuid="58ac1135-b1d1-4a48-a1a8-e5835f4ff175">
+    <Interface type="Interface" uuid="d4f1ae36-9761-4c8c-970e-4b328b04a07c"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="842a75b5-2437-4ae2-a380-2c07b3717275">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="90e5aa12-1210-458e-935f-06b9284191a4">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="9cb17cf5-8801-4a21-8b96-c5fa15eb0da2"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="a34c1c6f-efd1-4b29-839e-697ef3292803">
-      <context type="sltp.mm.core.Context" uuid="842a75b5-2437-4ae2-a380-2c07b3717275"/>
+    <rootTask type="sltp.mm.core.Task" uuid="e47023b3-527c-45d4-8eb8-aceee197e5ce">
+      <context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="66664e3c-964c-46e5-97d2-817eb96781fb">
-        <tasks type="sltp.mm.core.Task" uuid="3c4b2a00-efe3-48b3-a850-862458737dd2">
+      <subgraph type="sltp.mm.core.Graph" uuid="4070c37b-2785-4f37-8644-b906fbf87812">
+        <tasks type="sltp.mm.core.Task" uuid="57b09b9d-2396-46b8-8804-f1f48c892819">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="842a75b5-2437-4ae2-a380-2c07b3717275"/>
+          <context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="51ff6b39-2098-4f20-861d-d223ebfb75e6">
+          <rates type="sltp.mm.core.Rate" uuid="ea0e1b7d-e29d-4feb-8b26-3ec430ad0afe">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -1019,7 +1045,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="2723dfbb-9b2f-4ac3-a43b-6728f6fa91c2">
+          <rates type="sltp.mm.core.Rate" uuid="edc970f6-d323-4f86-b96e-e6df61650047">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -1083,10 +1109,24 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
     <type>graph.Graph</type>
   </diagram.editor.model.Diagram>
 </sltp_editor>
+__MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
+<?xml version="1.0" encoding="utf-8"?>
+<Stateflow>
+  <machine id="1">
+    <P Name="sfVersion">80000049</P>
+    <Children>
+      <target id="2" name="sfun">
+        <P Name="description">Default Simulink S-Function Target.</P>
+      </target>
+    </Children>
+  </machine>
+</Stateflow>
+
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_1.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="system_14" Target="system_14.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_270" Target="system_270.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_3" Target="system_3.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
@@ -1096,10 +1136,10 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_14.xml.rels
   <Relationship Id="system_16" Target="system_16.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_220.xml.rels
+__MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_270.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="system_222" Target="system_222.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_272" Target="system_272.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_3.xml.rels
@@ -1108,10 +1148,16 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_3.xml.rels
   <Relationship Id="system_5" Target="system_5.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_60.xml.rels
+__MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_368.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="system_62" Target="system_62.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_370" Target="system_370.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+</Relationships>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_476.xml.rels
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="system_443" Target="system_443.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_70.xml.rels
@@ -1124,27 +1170,31 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="system_1" Target="system_1.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
-  <Relationship Id="system_220" Target="system_220.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
-  <Relationship Id="system_248" Target="system_248.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_30" Target="system_30.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_352" Target="system_352.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_368" Target="system_368.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_379" Target="system_379.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_399" Target="system_399.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_40" Target="system_40.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_423" Target="system_423.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_47" Target="system_47.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
-  <Relationship Id="system_60" Target="system_60.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_476" Target="system_476.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_70" Target="system_70.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[-1, 0, 1919, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">432</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Step" Name="GO signal" SID="2">
     <P Name="Position">[25, 110, 55, 140]</P>
     <P Name="ZOrder">-1</P>
-    <P Name="Time">.010</P>
+    <P Name="Time">.050</P>
     <P Name="SampleTime">.001</P>
   </Block>
   <Block BlockType="SubSystem" Name="RiseEdge filter" SID="3">
@@ -1167,6 +1217,16 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
     </Mask>
     <System Ref="system_14"/>
   </Block>
+  <Block BlockType="SubSystem" Name="RiseEdge filter.1" SID="270">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[150, 117, 175, 133]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
+    </Mask>
+    <System Ref="system_270"/>
+  </Block>
   <Block BlockType="FromWorkspace" Name="from workspace" SID="25">
     <P Name="Position">[25, 25, 115, 45]</P>
     <P Name="ZOrder">-4</P>
@@ -1182,16 +1242,16 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
     <P Name="OutputAfterFinalValue">Holding final value</P>
   </Block>
   <Block BlockType="Outport" Name="Out1" SID="27">
-    <P Name="Position">[200, 28, 230, 42]</P>
+    <P Name="Position">[260, 118, 290, 132]</P>
     <P Name="ZOrder">-6</P>
   </Block>
   <Block BlockType="Outport" Name="Out2" SID="28">
-    <P Name="Position">[200, 63, 230, 77]</P>
+    <P Name="Position">[260, 63, 290, 77]</P>
     <P Name="ZOrder">-7</P>
     <P Name="Port">2</P>
   </Block>
   <Block BlockType="Outport" Name="Out3" SID="29">
-    <P Name="Position">[80, 118, 110, 132]</P>
+    <P Name="Position">[260, 28, 290, 42]</P>
     <P Name="ZOrder">-8</P>
     <P Name="Port">3</P>
   </Block>
@@ -1206,9 +1266,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
     <P Name="Dst">14#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">3</P>
+    <P Name="ZOrder">9</P>
     <P Name="Src">3#out:1</P>
-    <P Name="Dst">27#in:1</P>
+    <P Name="Dst">29#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
@@ -1218,7 +1278,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
   <Line>
     <P Name="ZOrder">5</P>
     <P Name="Src">2#out:1</P>
-    <P Name="Dst">29#in:1</P>
+    <P Name="Dst">270#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">270#out:1</P>
+    <P Name="Dst">27#in:1</P>
   </Line>
 </System>
 
@@ -1373,20 +1438,19 @@ To Zero</P>
   </Line>
 </System>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/system_220.xml
+__MWOPC_PART_BEGIN__ /simulink/systems/system_270.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[225, 273, 545, 524]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="ZoomFactor">200</P>
   <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="221">
+  <Block BlockType="Inport" Name="In1" SID="271">
     <P Name="Position">[25, 33, 55, 47]</P>
     <P Name="ZOrder">-1</P>
   </Block>
-  <Block BlockType="SubSystem" Name="DetectRiseFromZero1" SID="222">
+  <Block BlockType="SubSystem" Name="DetectRiseFromZero1" SID="272">
     <P Name="Ports">[1, 1]</P>
     <P Name="Position">[105, 34, 130, 46]</P>
     <P Name="ZOrder">-2</P>
@@ -1394,69 +1458,57 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_220.xml
     <Mask>
       <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
     </Mask>
-    <System Ref="system_222"/>
+    <System Ref="system_272"/>
   </Block>
-  <Block BlockType="Product" Name="Product1" SID="228">
+  <Block BlockType="Product" Name="Product1" SID="279">
     <P Name="Ports">[2, 1]</P>
     <P Name="Position">[185, 26, 200, 44]</P>
     <P Name="ZOrder">-3</P>
     <P Name="RndMeth">Zero</P>
   </Block>
-  <Block BlockType="Sum" Name="Sum of&#xA;Elements" SID="232">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[235, 20, 265, 50]</P>
-    <P Name="ZOrder">1</P>
-    <P Name="IconShape">rectangular</P>
-    <P Name="Inputs">+</P>
-  </Block>
-  <Block BlockType="Outport" Name="Out1" SID="229">
-    <P Name="Position">[300, 28, 330, 42]</P>
+  <Block BlockType="Outport" Name="Out1" SID="280">
+    <P Name="Position">[225, 28, 255, 42]</P>
     <P Name="ZOrder">-4</P>
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">222#out:1</P>
-    <P Name="Dst">228#in:2</P>
+    <P Name="Src">272#out:1</P>
+    <P Name="Dst">279#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">221#out:1</P>
+    <P Name="Src">271#out:1</P>
     <P Name="Points">[15, 0]</P>
     <Branch>
       <P Name="ZOrder">3</P>
-      <P Name="Dst">222#in:1</P>
+      <P Name="Dst">272#in:1</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">4</P>
       <P Name="Points">[0, -10]</P>
-      <P Name="Dst">228#in:1</P>
+      <P Name="Dst">279#in:1</P>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">5</P>
-    <P Name="Src">228#out:1</P>
-    <P Name="Dst">232#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">232#out:1</P>
-    <P Name="Dst">229#in:1</P>
+    <P Name="Src">279#out:1</P>
+    <P Name="Dst">280#in:1</P>
   </Line>
 </System>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/system_222.xml
+__MWOPC_PART_BEGIN__ /simulink/systems/system_272.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[824, 401, 1324, 688]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="223">
+  <Block BlockType="Inport" Name="In1" SID="273">
     <P Name="Position">[25, 33, 55, 47]</P>
     <P Name="ZOrder">-1</P>
   </Block>
-  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="224">
+  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="274">
     <P Name="Ports">[1, 1]</P>
     <P Name="Position">[145, 25, 175, 55]</P>
     <P Name="ZOrder">-2</P>
@@ -1478,84 +1530,69 @@ To Zero</P>
       <P Name="ZeroCross">off</P>
     </InstanceData>
   </Block>
-  <Block BlockType="LookupNDDirect" Name="Direct Lookup&#xA;Table (n-D)" SID="225">
+  <Block BlockType="LookupNDDirect" Name="Direct Lookup&#xA;Table (n-D)" SID="275">
     <P Name="Ports">[2, 1]</P>
     <P Name="Position">[340, 25, 395, 80]</P>
     <P Name="ZOrder">-3</P>
     <P Name="Table">[0,1;0,0]</P>
   </Block>
-  <Block BlockType="UnitDelay" Name="Unit Delay" SID="226">
-    <P Name="Position">[225, 48, 260, 82]</P>
+  <Block BlockType="Sum" Name="Sum of&#xA;Elements" SID="276">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[85, 25, 115, 55]</P>
     <P Name="ZOrder">-4</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+</P>
+  </Block>
+  <Block BlockType="UnitDelay" Name="Unit Delay" SID="277">
+    <P Name="Position">[225, 48, 260, 82]</P>
+    <P Name="ZOrder">-5</P>
     <P Name="InitialCondition">1</P>
     <P Name="SampleTime">-1</P>
   </Block>
-  <Block BlockType="Outport" Name="Out1" SID="227">
-    <P Name="Position">[415, 48, 445, 62]</P>
-    <P Name="ZOrder">-5</P>
+  <Block BlockType="Outport" Name="Out1" SID="278">
+    <P Name="Position">[405, 48, 435, 62]</P>
+    <P Name="ZOrder">-6</P>
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">225#out:1</P>
-    <P Name="Dst">227#in:1</P>
+    <P Name="Src">275#out:1</P>
+    <P Name="Dst">278#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">226#out:1</P>
-    <P Name="Dst">225#in:2</P>
+    <P Name="Src">277#out:1</P>
+    <P Name="Dst">275#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">3</P>
-    <P Name="Src">224#out:1</P>
+    <P Name="Src">274#out:1</P>
     <P Name="Points">[20, 0]</P>
     <Branch>
       <P Name="ZOrder">4</P>
-      <P Name="Dst">225#in:1</P>
+      <P Name="Dst">275#in:1</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">5</P>
       <P Name="Points">[0, 25]</P>
-      <P Name="Dst">226#in:1</P>
+      <P Name="Dst">277#in:1</P>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">6</P>
-    <P Name="Src">223#out:1</P>
-    <P Name="Dst">224#in:1</P>
+    <P Name="Src">273#out:1</P>
+    <P Name="Dst">276#in:1</P>
   </Line>
-</System>
-
-__MWOPC_PART_BEGIN__ /simulink/systems/system_248.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
-  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="SetExecutionDomain">off</P>
-  <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="249">
-    <P Name="Position">[25, 28, 55, 42]</P>
-    <P Name="ZOrder">-1</P>
-  </Block>
-  <Block BlockType="ToWorkspace" Name="to workspace" SID="250">
-    <P Name="Ports">[1]</P>
-    <P Name="Position">[90, 25, 185, 45]</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="VariableName">end_signal</P>
-    <P Name="MaxDataPoints">inf</P>
-    <P Name="SampleTime">-1</P>
-  </Block>
   <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">249#out:1</P>
-    <P Name="Dst">250#in:1</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">276#out:1</P>
+    <P Name="Dst">274#in:1</P>
   </Line>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_3.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[225, 273, 545, 524]</P>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
@@ -1613,7 +1650,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_30.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
@@ -1637,10 +1674,349 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_30.xml
   </Line>
 </System>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/system_40.xml
+__MWOPC_PART_BEGIN__ /simulink/systems/system_352.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="353">
+    <P Name="Position">[25, 28, 55, 42]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="to workspace" SID="354">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[90, 25, 185, 45]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="VariableName">target_duration</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">353#out:1</P>
+    <P Name="Dst">354#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_368.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">806</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="369">
+    <P Name="Position">[25, 33, 55, 47]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="DetectRiseFromZero1" SID="370">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[105, 34, 130, 46]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
+    </Mask>
+    <System Ref="system_370"/>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="376">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[185, 26, 200, 44]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="RndMeth">Zero</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="377">
+    <P Name="Position">[225, 28, 255, 42]</P>
+    <P Name="ZOrder">-4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">370#out:1</P>
+    <P Name="Dst">376#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">369#out:1</P>
+    <P Name="Points">[15, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Dst">370#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, -10]</P>
+      <P Name="Dst">376#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">376#out:1</P>
+    <P Name="Dst">377#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_370.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
   <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="371">
+    <P Name="Position">[25, 33, 55, 47]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="372">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[145, 25, 175, 55]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="LibraryVersion">2.3</P>
+    <P Name="SourceBlock">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="SourceType">Compare To Zero</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">off</P>
+      <P Name="relop">==</P>
+      <P Name="OutDataTypeStr">boolean</P>
+      <P Name="ZeroCross">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="LookupNDDirect" Name="Direct Lookup&#xA;Table (n-D)" SID="373">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[340, 25, 395, 80]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="Table">[0,1;0,0]</P>
+  </Block>
+  <Block BlockType="UnitDelay" Name="Unit Delay" SID="374">
+    <P Name="Position">[225, 48, 260, 82]</P>
+    <P Name="ZOrder">-4</P>
+    <P Name="InitialCondition">1</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="375">
+    <P Name="Position">[415, 48, 445, 62]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">373#out:1</P>
+    <P Name="Dst">375#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">374#out:1</P>
+    <P Name="Dst">373#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">372#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Dst">373#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">374#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">371#out:1</P>
+    <P Name="Dst">372#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_379.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, 0, 1919, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">125</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In2" SID="390">
+    <P Name="Position">[-15, 43, 15, 57]</P>
+    <P Name="ZOrder">78</P>
+  </Block>
+  <Block BlockType="Inport" Name="In1" SID="380">
+    <P Name="Position">[-15, -2, 15, 12]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="468">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[85, -10, 115, 20]</P>
+    <P Name="ZOrder">83</P>
+    <P Name="LibraryVersion">2.3</P>
+    <P Name="SourceBlock">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="SourceType">Compare To Zero</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="relop">&gt;</P>
+      <P Name="OutDataTypeStr">boolean</P>
+      <P Name="ZeroCross">on</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="387">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[145, 36, 160, 54]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="RndMeth">Zero</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum of&#xA;Elements1" SID="341">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[45, -2, 55, 12]</P>
+    <P Name="ZOrder">77</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+</P>
+    <Mask>
+      <Display RunInitForIconRedraw="off">plot([0,1],[1,1])</Display>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Parameters</Prompt>
+      </DialogControl>
+    </Mask>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="389">
+    <P Name="Position">[220, 38, 250, 52]</P>
+    <P Name="ZOrder">-4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">387#out:1</P>
+    <P Name="Dst">389#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">341#out:1</P>
+    <P Name="Dst">468#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">468#out:1</P>
+    <P Name="Points">[5, 0; 0, 35]</P>
+    <P Name="Dst">387#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">380#out:1</P>
+    <P Name="Dst">341#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">390#out:1</P>
+    <P Name="Dst">387#in:2</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_399.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, 0, 1919, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">400</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In2" SID="400">
+    <P Name="Position">[20, 78, 50, 92]</P>
+    <P Name="ZOrder">78</P>
+  </Block>
+  <Block BlockType="Inport" Name="In1" SID="401">
+    <P Name="Position">[30, 13, 60, 27]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="466">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[75, 70, 105, 100]</P>
+    <P Name="ZOrder">81</P>
+    <P Name="LibraryVersion">2.3</P>
+    <P Name="SourceBlock">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="SourceType">Compare To Zero</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="relop">&gt;</P>
+      <P Name="OutDataTypeStr">boolean</P>
+      <P Name="ZeroCross">on</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="402">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[145, 36, 160, 54]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="RndMeth">Zero</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="404">
+    <P Name="Position">[220, 38, 250, 52]</P>
+    <P Name="ZOrder">-4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">402#out:1</P>
+    <P Name="Dst">404#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">466#out:1</P>
+    <P Name="Points">[15, 0; 0, -35]</P>
+    <P Name="Dst">402#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">400#out:1</P>
+    <P Name="Dst">466#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">401#out:1</P>
+    <P Name="Points">[38, 0; 0, 20]</P>
+    <P Name="Dst">402#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_40.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
@@ -1727,6 +2103,145 @@ To Zero</P>
     <P Name="ZOrder">7</P>
     <P Name="Src">44#out:1</P>
     <P Name="Dst">42#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_423.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">600</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In2" SID="424">
+    <P Name="Position">[25, 78, 55, 92]</P>
+    <P Name="ZOrder">78</P>
+  </Block>
+  <Block BlockType="Inport" Name="In1" SID="425">
+    <P Name="Position">[25, 33, 55, 47]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="426">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[145, 36, 160, 54]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="RndMeth">Zero</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="428">
+    <P Name="Position">[220, 38, 250, 52]</P>
+    <P Name="ZOrder">-4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">424#out:1</P>
+    <P Name="Points">[55, 0; 0, -35]</P>
+    <P Name="Dst">426#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">425#out:1</P>
+    <P Name="Dst">426#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">426#out:1</P>
+    <P Name="Dst">428#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_443.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, 0, 1919, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="444">
+    <P Name="Position">[25, 33, 55, 47]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="445">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[145, 25, 175, 55]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="LibraryVersion">2.3</P>
+    <P Name="SourceBlock">simulink/Logic and Bit
+Operations/Compare
+To Zero</P>
+    <P Name="SourceType">Compare To Zero</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">off</P>
+      <P Name="relop">==</P>
+      <P Name="OutDataTypeStr">boolean</P>
+      <P Name="ZeroCross">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="LookupNDDirect" Name="Direct Lookup&#xA;Table (n-D)" SID="446">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[340, 25, 395, 80]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="Table">[0,0;1,0]</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum of&#xA;Elements" SID="447">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[85, 25, 115, 55]</P>
+    <P Name="ZOrder">-4</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+</P>
+  </Block>
+  <Block BlockType="UnitDelay" Name="Unit Delay" SID="448">
+    <P Name="Position">[225, 48, 260, 82]</P>
+    <P Name="ZOrder">-5</P>
+    <P Name="InitialCondition">1</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="449">
+    <P Name="Position">[405, 48, 435, 62]</P>
+    <P Name="ZOrder">-6</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">446#out:1</P>
+    <P Name="Dst">449#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">448#out:1</P>
+    <P Name="Dst">446#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">445#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Dst">446#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">448#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">444#out:1</P>
+    <P Name="Dst">447#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">447#out:1</P>
+    <P Name="Dst">445#in:1</P>
   </Line>
 </System>
 
@@ -1823,6 +2338,132 @@ To Zero</P>
   </Line>
 </System>
 
+__MWOPC_PART_BEGIN__ /simulink/systems/system_476.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">413</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="477">
+    <P Name="Position">[-5, 58, 25, 72]</P>
+    <P Name="ZOrder">103</P>
+  </Block>
+  <Block BlockType="Constant" Name="1" SID="454">
+    <P Name="Position">[100, 97, 130, 123]</P>
+    <P Name="ZOrder">98</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Value">0.001</P>
+  </Block>
+  <Block BlockType="Constant" Name="2" SID="463">
+    <P Name="Position">[100, 134, 130, 156]</P>
+    <P Name="ZOrder">102</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Detect&#xA;DropToZero2" SID="443">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[80, 237, 95, 253]</P>
+    <P Name="ZOrder">93</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="BackgroundColor">darkGreen</P>
+    <P Name="ShowName">off</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display>plot([0,.5,.5,1],[1,1,0,0])</Display>
+    </Mask>
+    <System Ref="system_443"/>
+  </Block>
+  <Block BlockType="MinMax" Name="MinMax" SID="462">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[139, 155, 166, 170]</P>
+    <P Name="ZOrder">101</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">left</P>
+    <P Name="Function">max</P>
+    <P Name="Inputs">2</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum1" SID="452">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[150, 100, 170, 120]</P>
+    <P Name="ZOrder">96</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">right</P>
+    <P Name="Inputs">-++</P>
+  </Block>
+  <Block BlockType="Memory" Name="timer" SID="451">
+    <P Name="Position">[148, 205, 162, 220]</P>
+    <P Name="ZOrder">95</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">right</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="FontSize">14</P>
+    <P Name="FontWeight">bold</P>
+    <P Name="FontAngle">italic</P>
+    <P Name="InheritSampleTime">on</P>
+    <P Name="LinearizeAsDelay">on</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="478">
+    <P Name="Position">[-5, 238, 25, 252]</P>
+    <P Name="ZOrder">104</P>
+    <P Name="BlockMirror">on</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">879</P>
+    <P Name="Src">454#out:1</P>
+    <P Name="Dst">452#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">912</P>
+    <P Name="Src">462#out:1</P>
+    <P Name="Dst">451#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">911</P>
+    <P Name="Src">452#out:1</P>
+    <P Name="Dst">462#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">865</P>
+    <P Name="Src">451#out:1</P>
+    <P Name="Points">[0, 20]</P>
+    <Branch>
+      <P Name="ZOrder">927</P>
+      <P Name="Points">[177, 0; 0, -135]</P>
+      <P Name="Dst">452#in:3</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">918</P>
+      <P Name="Dst">443#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">915</P>
+    <P Name="Src">443#out:1</P>
+    <P Name="Dst">478#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">914</P>
+    <P Name="Src">477#out:1</P>
+    <P Name="Points">[130, 0]</P>
+    <P Name="Dst">452#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">913</P>
+    <P Name="Src">463#out:1</P>
+    <P Name="Points">[10, 0]</P>
+    <P Name="Dst">462#in:1</P>
+  </Line>
+</System>
+
 __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
@@ -1916,154 +2557,14 @@ To Zero</P>
   </Line>
 </System>
 
-__MWOPC_PART_BEGIN__ /simulink/systems/system_60.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
-  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="SetExecutionDomain">off</P>
-  <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="ZoomFactor">200</P>
-  <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="61">
-    <P Name="Position">[25, 33, 55, 47]</P>
-    <P Name="ZOrder">-1</P>
-  </Block>
-  <Block BlockType="SubSystem" Name="DetectRiseFromZero1" SID="62">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[105, 34, 130, 46]</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="RequestExecContextInheritance">off</P>
-    <Mask>
-      <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
-    </Mask>
-    <System Ref="system_62"/>
-  </Block>
-  <Block BlockType="Product" Name="Product1" SID="68">
-    <P Name="Ports">[2, 1]</P>
-    <P Name="Position">[185, 26, 200, 44]</P>
-    <P Name="ZOrder">-3</P>
-    <P Name="RndMeth">Zero</P>
-  </Block>
-  <Block BlockType="Outport" Name="Out1" SID="69">
-    <P Name="Position">[225, 28, 255, 42]</P>
-    <P Name="ZOrder">-4</P>
-  </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">62#out:1</P>
-    <P Name="Dst">68#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">61#out:1</P>
-    <P Name="Points">[15, 0]</P>
-    <Branch>
-      <P Name="ZOrder">3</P>
-      <P Name="Dst">62#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">4</P>
-      <P Name="Points">[0, -10]</P>
-      <P Name="Dst">68#in:1</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">68#out:1</P>
-    <P Name="Dst">69#in:1</P>
-  </Line>
-</System>
-
-__MWOPC_PART_BEGIN__ /simulink/systems/system_62.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
-  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="SetExecutionDomain">off</P>
-  <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="63">
-    <P Name="Position">[25, 33, 55, 47]</P>
-    <P Name="ZOrder">-1</P>
-  </Block>
-  <Block BlockType="Reference" Name="Compare&#xA;To Zero" SID="64">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[145, 25, 175, 55]</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="LibraryVersion">2.3</P>
-    <P Name="SourceBlock">simulink/Logic and Bit
-Operations/Compare
-To Zero</P>
-    <P Name="SourceType">Compare To Zero</P>
-    <P Name="SourceProductBaseCode">SL</P>
-    <InstanceData>
-      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
-      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
-      <P Name="RTWMemSecDataConstants">Inherit from model</P>
-      <P Name="RTWMemSecDataInternal">Inherit from model</P>
-      <P Name="RTWMemSecDataParameters">Inherit from model</P>
-      <P Name="ContentPreviewEnabled">off</P>
-      <P Name="relop">==</P>
-      <P Name="OutDataTypeStr">boolean</P>
-      <P Name="ZeroCross">off</P>
-    </InstanceData>
-  </Block>
-  <Block BlockType="LookupNDDirect" Name="Direct Lookup&#xA;Table (n-D)" SID="65">
-    <P Name="Ports">[2, 1]</P>
-    <P Name="Position">[340, 25, 395, 80]</P>
-    <P Name="ZOrder">-3</P>
-    <P Name="Table">[0,1;0,0]</P>
-  </Block>
-  <Block BlockType="UnitDelay" Name="Unit Delay" SID="66">
-    <P Name="Position">[225, 48, 260, 82]</P>
-    <P Name="ZOrder">-4</P>
-    <P Name="InitialCondition">1</P>
-    <P Name="SampleTime">-1</P>
-  </Block>
-  <Block BlockType="Outport" Name="Out1" SID="67">
-    <P Name="Position">[415, 48, 445, 62]</P>
-    <P Name="ZOrder">-5</P>
-  </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">65#out:1</P>
-    <P Name="Dst">67#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">66#out:1</P>
-    <P Name="Dst">65#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">64#out:1</P>
-    <P Name="Points">[20, 0]</P>
-    <Branch>
-      <P Name="ZOrder">4</P>
-      <P Name="Dst">65#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">5</P>
-      <P Name="Points">[0, 25]</P>
-      <P Name="Dst">66#in:1</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">63#out:1</P>
-    <P Name="Dst">64#in:1</P>
-  </Line>
-</System>
-
 __MWOPC_PART_BEGIN__ /simulink/systems/system_70.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="ZoomFactor">800</P>
+  <P Name="ZoomFactor">793</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Inport" Name="In1" SID="71">
     <P Name="Position">[25, 33, 55, 47]</P>
@@ -2211,59 +2712,59 @@ To Zero</P>
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[8, 44, 1913, 1080]</P>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="Open">on</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="ZoomFactor">88</P>
+  <P Name="ZoomFactor">86</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">267</P>
+  <P Name="SIDHighWatermark">479</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="SubSystem" Name="(&apos;Word&apos; input)" SID="1">
     <P Name="Ports">[0, 3]</P>
-    <P Name="Position">[-50, -391, 15, -329]</P>
+    <P Name="Position">[-50, -416, 15, -354]</P>
     <P Name="ZOrder">-1</P>
     <P Name="ForegroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
-      <Display IconFrame="off">port_label(&apos;output&apos;,1,&apos;Phonemes&apos;)
-port_label(&apos;output&apos;,2,&apos;Frames&apos;)
-port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
+      <Display IconFrame="off">port_label(&apos;output&apos;,1,&apos;GO signal&apos;)
+port_label(&apos;output&apos;,2,&apos;Structures&apos;)
+port_label(&apos;output&apos;,3,&apos;Phonemes&apos;)
 </Display>
     </Mask>
     <System Ref="system_1"/>
   </Block>
   <Block BlockType="SubSystem" Name="(to Motor cortex)" SID="30">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[1315, 145, 1395, 175]</P>
+    <P Name="Position">[1405, 145, 1520, 175]</P>
     <P Name="ZOrder">-2</P>
     <P Name="ForegroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
-      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;Motor Program&apos;)</Display>
+      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;Motor program selection&apos;)</Display>
     </Mask>
     <System Ref="system_30"/>
   </Block>
-  <Block BlockType="SubSystem" Name="(to Motor cortex)1" SID="248">
+  <Block BlockType="SubSystem" Name="(to Motor cortex)1" SID="352">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[1300, -400, 1380, -370]</P>
-    <P Name="ZOrder">36</P>
+    <P Name="Position">[1405, -400, 1520, -370]</P>
+    <P Name="ZOrder">65</P>
     <P Name="ForegroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
-      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;END signal&apos;)</Display>
+      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;Motor program duration&apos;)</Display>
     </Mask>
-    <System Ref="system_248"/>
+    <System Ref="system_352"/>
   </Block>
-  <Block BlockType="Memory" Name="Caudate" SID="33">
-    <P Name="Position">[515, -117, 530, -103]</P>
+  <Block BlockType="Memory" Name="Caudate / GP" SID="33">
+    <P Name="Position">[405, -117, 420, -103]</P>
     <P Name="ZOrder">-3</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
@@ -2274,16 +2775,38 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay1" SID="34">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[735, 156, 740, 164]</P>
+    <P Name="Position">[590, 156, 595, 164]</P>
     <P Name="ZOrder">-4</P>
     <P Name="BackgroundColor">green</P>
     <P Name="ShowName">off</P>
     <P Name="InputPortMap">u0</P>
     <P Name="DelayLength">5</P>
   </Block>
+  <Block BlockType="Delay" Name="Delay11" SID="342">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[590, -389, 595, -381]</P>
+    <P Name="ZOrder">56</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="NameLocation">top</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="DelayLength">5</P>
+  </Block>
+  <Block BlockType="Delay" Name="Delay12" SID="356">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1036, -165, 1044, -160]</P>
+    <P Name="ZOrder">70</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="NameLocation">left</P>
+    <P Name="ShowName">off</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="DelayLength">5</P>
+  </Block>
   <Block BlockType="Delay" Name="Delay2" SID="255">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[781, -255, 789, -250]</P>
+    <P Name="Position">[776, -165, 784, -160]</P>
     <P Name="ZOrder">39</P>
     <P Name="BlockRotation">270</P>
     <P Name="BackgroundColor">green</P>
@@ -2294,7 +2817,7 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay3" SID="36">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[316, 180, 324, 185]</P>
+    <P Name="Position">[211, -5, 219, 0]</P>
     <P Name="ZOrder">-6</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
@@ -2306,7 +2829,7 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay4" SID="37">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[631, 50, 639, 55]</P>
+    <P Name="Position">[561, -165, 569, -160]</P>
     <P Name="ZOrder">-7</P>
     <P Name="BlockRotation">270</P>
     <P Name="BackgroundColor">green</P>
@@ -2317,7 +2840,7 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay5" SID="38">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[595, -255, 605, -250]</P>
+    <P Name="Position">[530, -165, 540, -160]</P>
     <P Name="ZOrder">-8</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
@@ -2329,7 +2852,7 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay6" SID="39">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1515, -100, 1520, -90]</P>
+    <P Name="Position">[1625, -90, 1630, -80]</P>
     <P Name="ZOrder">-9</P>
     <P Name="BackgroundColor">green</P>
     <P Name="NameLocation">top</P>
@@ -2337,25 +2860,12 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
     <P Name="InputPortMap">u0</P>
     <P Name="DelayLength">10</P>
   </Block>
-  <Block BlockType="Delay" Name="Delay7" SID="198">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1221, 100, 1229, 105]</P>
-    <P Name="ZOrder">19</P>
-    <P Name="BlockRotation">270</P>
-    <P Name="BackgroundColor">green</P>
-    <P Name="NameLocation">left</P>
-    <P Name="ShowName">off</P>
-    <P Name="InputPortMap">u0</P>
-    <P Name="DelayLength">5</P>
-  </Block>
   <Block BlockType="Delay" Name="Delay8" SID="199">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[351, 50, 359, 55]</P>
-    <P Name="ZOrder">22</P>
-    <P Name="BlockRotation">270</P>
+    <P Name="Position">[590, 66, 595, 74]</P>
+    <P Name="ZOrder">89</P>
     <P Name="BlockMirror">on</P>
     <P Name="BackgroundColor">green</P>
-    <P Name="NameLocation">right</P>
     <P Name="ShowName">off</P>
     <P Name="HideAutomaticName">off</P>
     <P Name="InputPortMap">u0</P>
@@ -2363,7 +2873,7 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay9" SID="256">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1056, -255, 1064, -250]</P>
+    <P Name="Position">[1011, -165, 1019, -160]</P>
     <P Name="ZOrder">40</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
@@ -2375,10 +2885,10 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="SubSystem" Name="Detect&#xA;DropToZero" SID="40">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[622, 120, 648, 135]</P>
-    <P Name="ZOrder">-10</P>
+    <P Name="Position">[557, 120, 573, 135]</P>
+    <P Name="ZOrder">90</P>
     <P Name="BlockRotation">270</P>
-    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="BackgroundColor">darkGreen</P>
     <P Name="NameLocation">left</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
@@ -2389,9 +2899,9 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
   </Block>
   <Block BlockType="SubSystem" Name="Detect&#xA;DropToZero1" SID="47">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1510, -82, 1525, -68]</P>
+    <P Name="Position">[1620, -72, 1635, -58]</P>
     <P Name="ZOrder">-11</P>
-    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="ShowPortLabels">none</P>
@@ -2401,14 +2911,28 @@ port_label(&apos;output&apos;,3,&apos;GO signal&apos;)
     </Mask>
     <System Ref="system_47"/>
   </Block>
-  <Block BlockType="M-S-Function" Name="FO to IFS" SID="55">
+  <Block BlockType="M-S-Function" Name="FO to IFS1" SID="56">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[346, 80, 364, 110]</P>
-    <P Name="ZOrder">-13</P>
-    <P Name="BlockRotation">270</P>
+    <P Name="Position">[1610, -115, 1645, -95]</P>
+    <P Name="ZOrder">-14</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="ShowName">off</P>
+    <P Name="FunctionName">godiva_weights</P>
+    <P Name="Parameters">&apos;godiva_weights_PreSMA2IFS.mat&apos;</P>
+    <Mask>
+      <Display>plot([0,.5,0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50],[.5,.5,0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50])
+patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.625),.5+.8*([0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50]-.5),1*[1,1,1])
+</Display>
+    </Mask>
+  </Block>
+  <Block BlockType="M-S-Function" Name="FO to IFS2" SID="320">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[520, 61, 550, 79]</P>
+    <P Name="ZOrder">53</P>
     <P Name="BlockMirror">on</P>
-    <P Name="BackgroundColor">lightBlue</P>
-    <P Name="NameLocation">left</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="FunctionName">godiva_weights</P>
     <P Name="Parameters">&apos;godiva_weights_PMC2IFS.mat&apos;</P>
@@ -2418,24 +2942,27 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 </Display>
     </Mask>
   </Block>
-  <Block BlockType="M-S-Function" Name="FO to IFS1" SID="56">
+  <Block BlockType="M-S-Function" Name="FO to IFS3" SID="357">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1500, -125, 1535, -105]</P>
-    <P Name="ZOrder">-14</P>
-    <P Name="ForegroundColor">gray</P>
+    <P Name="Position">[1031, -290, 1049, -260]</P>
+    <P Name="ZOrder">71</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="NameLocation">right</P>
     <P Name="ShowName">off</P>
     <P Name="FunctionName">godiva_weights</P>
-    <P Name="Parameters">&apos;godiva_weights_PreSMA2IFS.mat&apos;</P>
+    <P Name="Parameters">&apos;godiva_weights_PMC2SMA.mat&apos;</P>
     <Mask>
-      <Display>plot([0,.5,0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50],[.5,.5,0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50])
+      <Display IconRotate="port">plot([0,.5,0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50],[.5,.5,0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50])
+patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.625),.5+.8*([0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50]-.5),1*[1,1,1])
 </Display>
     </Mask>
   </Block>
   <Block BlockType="M-S-Function" Name="IFS to FO" SID="57">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[770, 151, 800, 169]</P>
+    <P Name="Position">[715, 151, 745, 169]</P>
     <P Name="ZOrder">-15</P>
-    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="BackgroundColor">yellow</P>
     <P Name="ShowName">off</P>
     <P Name="FunctionName">godiva_weights</P>
     <P Name="Parameters">&apos;godiva_weights_IFS2PMC.mat&apos;</P>
@@ -2447,10 +2974,10 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="M-S-Function" Name="PreSMA to IFS" SID="59">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[550, -119, 580, -101]</P>
+    <P Name="Position">[475, -119, 505, -101]</P>
     <P Name="ZOrder">-17</P>
     <P Name="BlockMirror">on</P>
-    <P Name="BackgroundColor">gray</P>
+    <P Name="BackgroundColor">yellow</P>
     <P Name="ShowName">off</P>
     <P Name="FunctionName">godiva_weights</P>
     <P Name="Parameters">&apos;godiva_weights_PreSMA2IFS.mat&apos;</P>
@@ -2460,15 +2987,51 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 </Display>
     </Mask>
   </Block>
-  <Block BlockType="Product" Name="Product" SID="231">
+  <Block BlockType="SubSystem" Name="Product1" SID="399">
     <P Name="Ports">[2, 1]</P>
-    <P Name="Position">[1020, 22, 1035, 38]</P>
-    <P Name="ZOrder">30</P>
-    <P Name="BlockMirror">on</P>
-    <P Name="NameLocation">top</P>
+    <P Name="Position">[1030, -393, 1046, -377]</P>
+    <P Name="ZOrder">109</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="NameLocation">left</P>
+    <P Name="ShowName">off</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;cb714fd2-ec20-4c95-840b-3c33b182e4d2&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;ba7baf50-9858-4e24-8d5a-e18564fc60db&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In2&quot;],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;5a484be2-633b-44b6-959d-bdc0af11c3ad&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;],&quot;side&quot;:&quot;BOTTOM&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;1fef5d44-fcc1-494e-8fe1-6645591ad45a&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;50d4ba5f-3053-4fae-9d0b-dbd08b398031&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <Mask>
+      <Display PortRotate="physical">port_label(&apos;output&apos;,1,&apos; X&apos;)</Display>
+    </Mask>
+    <System Ref="system_399"/>
   </Block>
-  <Block BlockType="Memory" Name="Putamen" SID="122">
-    <P Name="Position">[945, -112, 960, -98]</P>
+  <Block BlockType="SubSystem" Name="Product2" SID="379">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1005, -348, 1021, -332]</P>
+    <P Name="ZOrder">75</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="NameLocation">left</P>
+    <P Name="ShowName">off</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;cb714fd2-ec20-4c95-840b-3c33b182e4d2&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In2&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;ba7baf50-9858-4e24-8d5a-e18564fc60db&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;5a484be2-633b-44b6-959d-bdc0af11c3ad&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;BOTTOM&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;1fef5d44-fcc1-494e-8fe1-6645591ad45a&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;50d4ba5f-3053-4fae-9d0b-dbd08b398031&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <Mask>
+      <Display PortRotate="physical">port_label(&apos;input&apos;,1,&apos; X&apos;)</Display>
+    </Mask>
+    <System Ref="system_379"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Product3" SID="423">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1005, 152, 1021, 168]</P>
+    <P Name="ZOrder">88</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">left</P>
+    <P Name="ShowName">off</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;cb714fd2-ec20-4c95-840b-3c33b182e4d2&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;ba7baf50-9858-4e24-8d5a-e18564fc60db&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In2&quot;],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;5a484be2-633b-44b6-959d-bdc0af11c3ad&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;],&quot;side&quot;:&quot;BOTTOM&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;1fef5d44-fcc1-494e-8fe1-6645591ad45a&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;50d4ba5f-3053-4fae-9d0b-dbd08b398031&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <Mask>
+      <Display PortRotate="physical">port_label(&apos;input&apos;,2,&apos; X&apos;)</Display>
+    </Mask>
+    <System Ref="system_423"/>
+  </Block>
+  <Block BlockType="Memory" Name="Putamen / GP" SID="122">
+    <P Name="Position">[930, -117, 945, -103]</P>
     <P Name="ZOrder">2</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
@@ -2477,43 +3040,27 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="InheritSampleTime">on</P>
     <P Name="LinearizeAsDelay">on</P>
   </Block>
-  <Block BlockType="SubSystem" Name="RiseTransient Filter" SID="60">
+  <Block BlockType="SubSystem" Name="RiseTransient Filter3" SID="368">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[430, -118, 445, -102]</P>
-    <P Name="ZOrder">-18</P>
-    <P Name="BlockMirror">on</P>
-    <P Name="BackgroundColor">gray</P>
+    <P Name="Position">[490, -393, 505, -377]</P>
+    <P Name="ZOrder">78</P>
+    <P Name="BackgroundColor">darkGreen</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
       <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
     </Mask>
-    <System Ref="system_60"/>
-  </Block>
-  <Block BlockType="SubSystem" Name="RiseTransient Filter1" SID="220">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[845, -113, 860, -97]</P>
-    <P Name="ZOrder">29</P>
-    <P Name="BlockMirror">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="ShowName">off</P>
-    <P Name="RequestExecContextInheritance">off</P>
-    <Mask>
-      <Display>plot([0,.5,.5,1],[0,0,1,1])</Display>
-    </Mask>
-    <System Ref="system_220"/>
+    <System Ref="system_368"/>
   </Block>
   <Block BlockType="M-S-Function" Name="SMA" SID="181">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[810, -454, 985, -316]</P>
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[815, -452, 940, -318]</P>
     <P Name="ZOrder">14</P>
     <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-    <P Name="FontAngle">italic</P>
-    <P Name="FunctionName">godiva_WTAlayer</P>
-    <P Name="Parameters">&apos;SMA&apos;,1, 0,1</P>
+    <P Name="FunctionName">godiva_Slayer</P>
+    <P Name="Parameters">&apos;SMA&apos;, 0, 1</P>
     <Mask>
-      <Display IconRotate="port">image(imread(&apos;godiva_WTAlayer02.jpg&apos;))
+      <Display IconRotate="port">image(imread(&apos;godiva_Slayer.jpg&apos;))
 
 </Display>
       <Description>Plan / Choice competitive layer</Description>
@@ -2525,11 +3072,49 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
       </DialogControl>
     </Mask>
   </Block>
+  <Block BlockType="Scope" Name="Scope" SID="405">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1315, -181, 1345, -149]</P>
+    <P Name="ZOrder">82</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-0.01152&apos;,&apos;MaxYLimReal&apos;,&apos;0.0201&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;0.0201&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;timer&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;-0.01152&apos;,&apos;MaxYLimReal&apos;,&apos;0.0201&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;0.0201&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2022a&apos;)),&apos;Version&apos;,&apos;2022a&apos;,&apos;Position&apos;,[2048 361 1528 420])</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="283">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[770, -350, 790, -330]</P>
+    <P Name="ZOrder">66</P>
+    <P Name="NameLocation">top</P>
+    <P Name="Inputs">+|+</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum of&#xA;Elements1" SID="406">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1273, -250, 1287, -240]</P>
+    <P Name="ZOrder">107</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="NameLocation">left</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+</P>
+    <Mask>
+      <Display RunInitForIconRedraw="off">plot([0,1],[1,1])</Display>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Parameters</Prompt>
+      </DialogControl>
+    </Mask>
+  </Block>
   <Block BlockType="SubSystem" Name="VA Thalamus1" SID="70">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1510, -62, 1525, -48]</P>
+    <P Name="Position">[1620, -52, 1635, -38]</P>
     <P Name="ZOrder">-19</P>
-    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">darkGreen</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
@@ -2538,7 +3123,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <System Ref="system_70"/>
   </Block>
   <Block BlockType="Memory" Name="VA thalamus" SID="81">
-    <P Name="Position">[395, -117, 410, -103]</P>
+    <P Name="Position">[280, -117, 295, -103]</P>
     <P Name="ZOrder">-20</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
@@ -2548,7 +3133,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="LinearizeAsDelay">on</P>
   </Block>
   <Block BlockType="Memory" Name="VL thalamus" SID="123">
-    <P Name="Position">[810, -112, 825, -98]</P>
+    <P Name="Position">[805, -117, 820, -103]</P>
     <P Name="ZOrder">3</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
@@ -2559,17 +3144,21 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="M-S-Function" Name="left pIFS" SID="82">
     <P Name="Ports">[3, 1]</P>
-    <P Name="Position">[385, 91, 570, 229]</P>
+    <P Name="Position">[295, 91, 480, 229]</P>
     <P Name="ZOrder">-21</P>
     <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-    <P Name="FontAngle">italic</P>
     <P Name="FunctionName">godiva_WTACOMPlayer</P>
-    <P Name="Parameters">&apos;IFS&apos;, 7 , 0, 1</P>
+    <P Name="Parameters">&apos;IFS&apos;, 7 , 0, 1, 1</P>
     <Mask>
       <Display IconRotate="port">image(imread(&apos;godiva_WTAlayer01.jpg&apos;))
 </Display>
       <Description>Plan / Choice competitive layer</Description>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
     </Mask>
   </Block>
   <Block BlockType="M-S-Function" Name="left vPMC" SID="54">
@@ -2577,12 +3166,11 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="Position">[815, 91, 990, 229]</P>
     <P Name="ZOrder">-12</P>
     <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-    <P Name="FontAngle">italic</P>
     <P Name="FunctionName">godiva_WTAlayer</P>
     <P Name="Parameters">&apos;PMC&apos;,1, 0,1</P>
     <Mask>
       <Display IconRotate="port">image(imread(&apos;godiva_WTAlayer02.jpg&apos;))
+
 
 </Display>
       <Description>Plan / Choice competitive layer</Description>
@@ -2596,38 +3184,50 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="M-S-Function" Name="preSMA" SID="58">
     <P Name="Ports">[3, 1]</P>
-    <P Name="Position">[390, -456, 575, -314]</P>
+    <P Name="Position">[290, -456, 475, -314]</P>
     <P Name="ZOrder">-16</P>
     <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-    <P Name="FontAngle">italic</P>
     <P Name="FunctionName">godiva_WTACOMPlayer</P>
-    <P Name="Parameters">&apos;PreSMA&apos;, 1, 0, 1</P>
+    <P Name="Parameters">&apos;PreSMA&apos;, 1, 0, 1, 1</P>
     <Mask>
       <Display IconRotate="port">image(imread(&apos;godiva_WTAlayer01.jpg&apos;))
 
 </Display>
       <Description>Plan / Choice competitive layer</Description>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
     </Mask>
   </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">82#out:1</P>
-    <P Name="Points">[60, 0]</P>
-    <Branch>
-      <P Name="ZOrder">2</P>
-      <P Name="Dst">40#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">3</P>
-      <P Name="Dst">34#in:1</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">57#out:1</P>
-    <P Name="Dst">54#in:1</P>
-  </Line>
+  <Block BlockType="M-S-Function" Name="preSMA to SMA" SID="355">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[720, -394, 750, -376]</P>
+    <P Name="ZOrder">69</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="FunctionName">godiva_weights</P>
+    <P Name="Parameters">&apos;godiva_weights_preSMA2SMA.mat&apos;</P>
+    <Mask>
+      <Display IconRotate="port">plot([0,.5,0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50],[.5,.5,0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50])
+patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.625),.5+.8*([0.50,0.35,0.21,0.10,0.02,0.00,1.00,0.98,0.90,0.79,0.65,0.50]-.5),1*[1,1,1])
+</Display>
+    </Mask>
+  </Block>
+  <Block BlockType="SubSystem" Name="timer" SID="476">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1272, -215, 1288, -190]</P>
+    <P Name="ZOrder">106</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">right</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_476"/>
+  </Block>
   <Line>
     <P Name="ZOrder">6</P>
     <P Name="Src">34#out:1</P>
@@ -2636,18 +3236,13 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">8</P>
     <P Name="Src">38#out:1</P>
-    <P Name="Points">[0, 135]</P>
+    <P Name="Points">[0, 45]</P>
     <P Name="Dst">59#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">9</P>
-    <P Name="Src">60#out:1</P>
-    <P Name="Dst">81#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">13</P>
+    <P Name="ZOrder">545</P>
     <P Name="Src">33#out:1</P>
-    <P Name="Dst">60#in:1</P>
+    <P Name="Dst">81#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">14</P>
@@ -2657,96 +3252,30 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">15</P>
     <P Name="Src">81#out:1</P>
-    <P Name="Points">[-70, 0]</P>
+    <P Name="Points">[-60, 0]</P>
     <P Name="Dst">36#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">16</P>
     <P Name="Src">36#out:1</P>
-    <P Name="Points">[0, 15]</P>
+    <P Name="Points">[0, 200]</P>
     <P Name="Dst">82#in:3</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17</P>
-    <P Name="Src">1#out:1</P>
-    <P Name="Points">[-5, 0; 174, 0; 0, 540]</P>
-    <P Name="Dst">82#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">18</P>
-    <P Name="Src">55#out:1</P>
+    <P Name="ZOrder">687</P>
+    <P Name="Src">320#out:1</P>
+    <P Name="Points">[-244, 0; 0, 45]</P>
     <P Name="Dst">82#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">19</P>
     <P Name="Src">1#out:2</P>
-    <P Name="Points">[226, 0; 0, -25]</P>
+    <P Name="Points">[270, 0]</P>
     <P Name="Dst">58#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">20</P>
-    <P Name="Src">1#out:3</P>
-    <P Name="Points">[-5, 0]</P>
-    <P Name="Dst">58#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">21</P>
-    <P Name="Src">37#out:1</P>
-    <P Name="Points">[0, -523; -269, 0; 0, 48]</P>
-    <P Name="Dst">58#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">22</P>
-    <P Name="Src">40#out:1</P>
-    <P Name="Dst">37#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">41</P>
+    <P Name="ZOrder">548</P>
     <P Name="Src">122#out:1</P>
-    <P Name="Dst">220#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">58#out:1</P>
-    <P Name="Points">[20, 0]</P>
-    <P Name="Dst">38#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">157</P>
-    <P Name="Src">198#out:1</P>
-    <P Name="Points">[0, -200]</P>
-    <P Name="Dst">122#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">10</P>
-    <P Name="Src">54#out:1</P>
-    <P Name="Points">[62, 0]</P>
-    <Branch>
-      <P Name="ZOrder">173</P>
-      <P Name="Points">[0, -125]</P>
-      <P Name="Dst">231#in:2</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">172</P>
-      <P Name="Points">[168, 0]</P>
-      <Branch>
-        <P Name="ZOrder">168</P>
-        <P Name="Dst">30#in:1</P>
-      </Branch>
-      <Branch>
-        <P Name="ZOrder">149</P>
-        <P Name="Dst">198#in:1</P>
-      </Branch>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">144</P>
-    <P Name="Src">199#out:1</P>
-    <P Name="Dst">55#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">150</P>
-    <P Name="Src">220#out:1</P>
     <P Name="Dst">123#in:1</P>
   </Line>
   <Line>
@@ -2756,35 +3285,188 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="Dst">255#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">171</P>
+    <P Name="ZOrder">686</P>
+    <P Name="Src">256#out:1</P>
+    <P Name="Dst">423#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">422</P>
+    <P Name="Src">1#out:1</P>
+    <P Name="Points">[63, 0; 0, -155; 697, 0]</P>
+    <P Name="Dst">283#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">273</P>
+    <P Name="Src">1#out:3</P>
+    <P Name="Points">[61, 0; 0, 525]</P>
+    <P Name="Dst">82#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">469</P>
+    <P Name="Src">283#out:1</P>
+    <P Name="Dst">379#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">421</P>
+    <P Name="Src">255#out:1</P>
+    <P Name="Dst">283#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">434</P>
+    <P Name="Src">342#out:1</P>
+    <P Name="Dst">355#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">448</P>
+    <P Name="Src">356#out:1</P>
+    <P Name="Dst">357#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">450</P>
+    <P Name="Src">357#out:1</P>
+    <P Name="Points">[0, -46]</P>
+    <Branch>
+      <P Name="ZOrder">991</P>
+      <P Name="Points">[17, 0; 0, -128; -262, 0; 0, 39]</P>
+      <P Name="Dst">181#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">821</P>
+      <P Name="Dst">399#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">518</P>
+    <P Name="Src">355#out:1</P>
+    <P Name="Dst">181#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">467</P>
+    <P Name="Src">379#out:1</P>
+    <P Name="Dst">256#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">523</P>
+    <P Name="Src">368#out:1</P>
+    <P Name="Points">[25, 0]</P>
+    <Branch>
+      <P Name="ZOrder">955</P>
+      <P Name="Dst">38#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">831</P>
+      <P Name="Dst">342#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">524</P>
+    <P Name="Src">58#out:1</P>
+    <P Name="Dst">368#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">563</P>
+    <P Name="Src">399#out:1</P>
+    <P Name="Points">[229, 0]</P>
+    <Branch>
+      <P Name="ZOrder">1000</P>
+      <P Name="Dst">406#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">996</P>
+      <P Name="Dst">352#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">593</P>
+    <P Name="Src">82#out:1</P>
+    <P Name="Points">[80, 0]</P>
+    <Branch>
+      <P Name="ZOrder">614</P>
+      <P Name="Dst">34#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">399</P>
+      <P Name="Dst">40#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">828</P>
+    <P Name="Src">37#out:1</P>
+    <P Name="Points">[0, -303; -302, 0; 0, 43]</P>
+    <P Name="Dst">58#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">688</P>
+    <P Name="Src">199#out:1</P>
+    <P Name="Dst">320#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">766</P>
+    <P Name="Src">57#out:1</P>
+    <P Name="Dst">54#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">767</P>
+    <P Name="Src">54#out:1</P>
+    <P Name="Dst">423#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">768</P>
+    <P Name="Src">423#out:1</P>
+    <P Name="Points">[14, 0]</P>
+    <Branch>
+      <P Name="ZOrder">786</P>
+      <P Name="Dst">30#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">770</P>
+      <P Name="Points">[0, -90]</P>
+      <Branch>
+        <P Name="ZOrder">772</P>
+        <P Name="Dst">199#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">771</P>
+        <P Name="Dst">356#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">826</P>
+    <P Name="Src">40#out:1</P>
+    <P Name="Dst">37#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">466</P>
     <P Name="Src">181#out:1</P>
     <P Name="Points">[70, 0]</P>
     <Branch>
-      <P Name="ZOrder">181</P>
-      <P Name="Dst">256#in:1</P>
+      <P Name="ZOrder">998</P>
+      <P Name="Dst">379#in:2</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">180</P>
-      <P Name="Dst">248#in:1</P>
+      <P Name="ZOrder">800</P>
+      <P Name="Dst">399#in:2</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">174</P>
-    <P Name="Src">231#out:1</P>
-    <P Name="Points">[-660, 0]</P>
-    <P Name="Dst">199#in:1</P>
+    <P Name="ZOrder">945</P>
+    <P Name="Src">476#out:1</P>
+    <P Name="Points">[0, 20]</P>
+    <Branch>
+      <P Name="ZOrder">952</P>
+      <P Name="Dst">405#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">951</P>
+      <P Name="Points">[0, 55]</P>
+      <P Name="Dst">122#in:1</P>
+    </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">186</P>
-    <P Name="Src">255#out:1</P>
-    <P Name="Points">[0, -125]</P>
-    <P Name="Dst">181#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">187</P>
-    <P Name="Src">256#out:1</P>
-    <P Name="Points">[0, 270]</P>
-    <P Name="Dst">231#in:1</P>
+    <P Name="ZOrder">953</P>
+    <P Name="Src">406#out:1</P>
+    <P Name="Dst">476#in:1</P>
   </Line>
   <Annotation SID="83">
     <P Name="Name">                                                                                                                 
@@ -2792,16 +3474,17 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 
 
  </P>
-    <P Name="Position">[352, -129, 606, -77]</P>
+    <P Name="Position">[362, -129, 471, -77]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
     <P Name="BackgroundColor">gray</P>
+    <P Name="DropShadow">on</P>
     <P Name="ZOrder">-1</P>
   </Annotation>
   <Annotation SID="84">
     <P Name="Name">Cerebral cortex</P>
-    <P Name="Position">[1537, 45, 1641, 64]</P>
+    <P Name="Position">[1647, 55, 1751, 74]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">lightBlue</P>
     <P Name="ZOrder">-2</P>
@@ -2811,7 +3494,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="85">
     <P Name="Name">BG / thalamus</P>
-    <P Name="Position">[1537, 69, 1633, 88]</P>
+    <P Name="Position">[1647, 74, 1743, 93]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-3</P>
@@ -2821,167 +3504,142 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="86">
     <P Name="Name">godiva_phonemes.csv</P>
-    <P Name="Position">[1557, -239, 1658, -227]</P>
+    <P Name="Position">[1667, -229, 1768, -217]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="DropShadow">on</P>
     <P Name="ZOrder">-4</P>
-    <P Name="ClickFcn">an=getCallbackAnnotation; winopen(an.Text);</P>
+    <P Name="ClickFcn">an=getCallbackAnnotation; system([&apos;open &apos;,fullfile(fileparts(which(&apos;godiva&apos;)),an.Text)]);</P>
   </Annotation>
   <Annotation SID="87">
     <P Name="Name">1. Edit the file</P>
-    <P Name="Position">[1484, -238, 1546, -226]</P>
+    <P Name="Position">[1594, -228, 1656, -216]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-5</P>
   </Annotation>
   <Annotation SID="88">
     <P Name="Name">to change the set of valid &apos;phonemes&apos; (IFS representation)</P>
-    <P Name="Position">[1677, -238, 1934, -226]</P>
+    <P Name="Position">[1787, -228, 2044, -216]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-6</P>
   </Annotation>
   <Annotation SID="89">
     <P Name="Name">godiva_frames.csv</P>
-    <P Name="Position">[1557, -219, 1642, -207]</P>
+    <P Name="Position">[1667, -209, 1752, -197]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="DropShadow">on</P>
     <P Name="ZOrder">-7</P>
-    <P Name="ClickFcn">an=getCallbackAnnotation; winopen(an.Text);</P>
+    <P Name="ClickFcn">an=getCallbackAnnotation; system([&apos;open &apos;,fullfile(fileparts(which(&apos;godiva&apos;)),an.Text)]);</P>
   </Annotation>
   <Annotation SID="90">
     <P Name="Name">2. Edit the file</P>
-    <P Name="Position">[1484, -218, 1546, -206]</P>
+    <P Name="Position">[1594, -208, 1656, -196]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-8</P>
   </Annotation>
   <Annotation SID="91">
     <P Name="Name">to change the set of valid &apos;frames&apos; (PreSMA representation)</P>
-    <P Name="Position">[1659, -218, 1921, -206]</P>
+    <P Name="Position">[1769, -208, 2031, -196]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-9</P>
   </Annotation>
   <Annotation SID="92">
     <P Name="Name">godiva_productions.csv</P>
-    <P Name="Position">[1557, -199, 1663, -187]</P>
+    <P Name="Position">[1667, -189, 1773, -177]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="DropShadow">on</P>
     <P Name="ZOrder">-10</P>
-    <P Name="ClickFcn">an=getCallbackAnnotation; winopen(an.Text);</P>
+    <P Name="ClickFcn">an=getCallbackAnnotation; system([&apos;open &apos;,fullfile(fileparts(which(&apos;godiva&apos;)),an.Text)]);</P>
   </Annotation>
   <Annotation SID="93">
     <P Name="Name">3. Edit the file</P>
-    <P Name="Position">[1484, -198, 1546, -186]</P>
+    <P Name="Position">[1594, -188, 1656, -176]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-11</P>
   </Annotation>
   <Annotation SID="94">
     <P Name="Name">to change the set of valid &apos;productions&apos; (SoundMap representation)</P>
-    <P Name="Position">[1688, -198, 1983, -186]</P>
+    <P Name="Position">[1798, -188, 2093, -176]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-12</P>
   </Annotation>
   <Annotation SID="95">
     <P Name="Name">ADDITIONAL OPTIONS</P>
-    <P Name="Position">[1481, -258, 1590, -246]</P>
+    <P Name="Position">[1591, -248, 1700, -236]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-13</P>
   </Annotation>
   <Annotation SID="96">
-    <P Name="Name">to define new &apos;word&apos; inputs</P>
-    <P Name="Position">[1641, -313, 1759, -301]</P>
+    <P Name="Name">to define new &apos;utterance&apos; inputs</P>
+    <P Name="Position">[1766, -303, 1904, -291]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-14</P>
   </Annotation>
   <Annotation SID="97">
     <P Name="Name">2. Click the &apos;Play&apos; icon in the menubar to start the simulation </P>
-    <P Name="Position">[1491, -293, 1759, -281]</P>
+    <P Name="Position">[1601, -283, 1869, -271]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-15</P>
   </Annotation>
   <Annotation SID="98">
     <P Name="Name">INSTRUCTIONS</P>
-    <P Name="Position">[1482, -333, 1558, -321]</P>
+    <P Name="Position">[1592, -323, 1668, -311]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-16</P>
   </Annotation>
   <Annotation SID="99">
     <P Name="Name">Generates a transient signal when input drops to zero</P>
-    <P Name="Position">[1561, -83, 1799, -71]</P>
+    <P Name="Position">[1671, -73, 1909, -61]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-17</P>
   </Annotation>
   <Annotation SID="100">
     <P Name="Name">NOTES</P>
-    <P Name="Position">[1482, -143, 1518, -131]</P>
+    <P Name="Position">[1592, -133, 1628, -121]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-18</P>
   </Annotation>
   <Annotation SID="101">
     <P Name="Name">Generates a transient signal when input raises from zero</P>
-    <P Name="Position">[1559, -63, 1811, -51]</P>
+    <P Name="Position">[1669, -53, 1921, -41]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-19</P>
   </Annotation>
   <Annotation SID="102">
     <P Name="Name">Temporal delay</P>
-    <P Name="Position">[1561, -103, 1630, -91]</P>
+    <P Name="Position">[1671, -93, 1740, -81]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-20</P>
   </Annotation>
   <Annotation SID="103">
     <P Name="Name">Synaptic weights</P>
-    <P Name="Position">[1557, -123, 1633, -111]</P>
+    <P Name="Position">[1667, -113, 1743, -101]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-21</P>
   </Annotation>
-  <Annotation SID="106">
-    <P Name="Name">                                                                                                                                                                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                       </P>
-    <P Name="Position">[291, -500, 663, 344]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="FixedHeight">on</P>
-    <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">[0.901961, 0.901961, 0.949020]</P>
-    <P Name="ZOrder">-24</P>
-    <P Name="FontName">Arial Narrow</P>
-  </Annotation>
   <Annotation SID="107">
-    <P Name="Name">&apos;Word&apos; input</P>
-    <P Name="Position">[-47, -420, 35, -401]</P>
+    <P Name="Name">&apos;Utterance&apos; input</P>
+    <P Name="Position">[-61, -445, 50, -426]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">darkGreen</P>
     <P Name="DropShadow">on</P>
@@ -2991,19 +3649,9 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="FontSize">14</P>
     <P Name="FontWeight">bold</P>
   </Annotation>
-  <Annotation SID="108">
-    <P Name="Name">to Motor Cortex</P>
-    <P Name="Position">[1157, 182, 1263, 201]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ForegroundColor">darkGreen</P>
-    <P Name="ZOrder">-26</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
   <Annotation SID="109">
-    <P Name="Name">&apos;Word&apos; input</P>
-    <P Name="Position">[1567, -314, 1620, -302]</P>
+    <P Name="Name">&apos;Utterance&apos; input</P>
+    <P Name="Position">[1677, -304, 1750, -292]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">darkGreen</P>
@@ -3013,31 +3661,31 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="110">
     <P Name="Name">1. Click the link </P>
-    <P Name="Position">[1485, -313, 1556, -301]</P>
+    <P Name="Position">[1595, -303, 1666, -291]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-28</P>
   </Annotation>
   <Annotation SID="111">
     <P Name="Name">godiva_targets.txt</P>
-    <P Name="Position">[1557, -179, 1637, -167]</P>
+    <P Name="Position">[1667, -169, 1747, -157]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="DropShadow">on</P>
     <P Name="ZOrder">-29</P>
-    <P Name="ClickFcn">an=getCallbackAnnotation; edit(an.Text);</P>
+    <P Name="ClickFcn">an=getCallbackAnnotation; system([&apos;open &apos;,fullfile(fileparts(which(&apos;godiva&apos;)),an.Text)]);</P>
   </Annotation>
   <Annotation SID="112">
     <P Name="Name">4. Edit the file</P>
-    <P Name="Position">[1484, -178, 1546, -166]</P>
+    <P Name="Position">[1594, -168, 1656, -156]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-30</P>
   </Annotation>
   <Annotation SID="113">
     <P Name="Name">to manually define new &apos;word&apos; inputs</P>
-    <P Name="Position">[1660, -178, 1821, -166]</P>
+    <P Name="Position">[1770, -168, 1931, -156]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-31</P>
@@ -3047,10 +3695,11 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Sequential Structure Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[412, -280, 557, -266]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Sequential Structure Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[276, -284, 485, -266]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-1</P>
     <P Name="FontSize">14</P>
@@ -3060,10 +3709,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Phonological Content Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[409, 263, 560, 277]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Phonological Content Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[276, 256, 494, 274]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-2</P>
     <P Name="FontSize">12</P>
@@ -3073,10 +3723,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Speech Sound Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[859, 263, 966, 277]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Speech Sound Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[839, 256, 988, 274]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-3</P>
     <P Name="FontSize">12</P>
@@ -3098,38 +3749,26 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[699, -500, 1081, 344]</P>
+    <P Name="Position">[702, -552, 1124, 292]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">[0.949020, 0.949020, 0.949020]</P>
+    <P Name="BackgroundColor">[0.964706, 0.964706, 0.964706]</P>
     <P Name="ZOrder">-40</P>
     <P Name="FontName">Arial Narrow</P>
-  </Annotation>
-  <Annotation SID="118">
-    <P Name="Name">                                                                                                                 
-
-
-
- </P>
-    <P Name="Position">[766, -129, 1020, -77]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="FixedHeight">on</P>
-    <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="ZOrder">-5</P>
   </Annotation>
   <Annotation SID="119">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Initiation Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[870, -280, 943, -266]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Initiation Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[853, -284, 958, -266]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-6</P>
+    <P Name="ZOrder">3</P>
     <P Name="FontSize">12</P>
   </Annotation>
   <Annotation SID="188">
@@ -3137,10 +3776,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px;&quot;&gt;Planning Loop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[405, -532, 560, -506]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28px; font-weight:600;&quot;&gt;Planning Loop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[312, -590, 508, -560]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-9</P>
     <P Name="FontSize">12</P>
@@ -3150,10 +3790,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px;&quot;&gt;Motor Loop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[841, -532, 964, -506]</P>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28px; font-weight:600;&quot;&gt;Motor Loop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[868, -590, 1023, -560]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-10</P>
     <P Name="FontSize">12</P>
@@ -3175,37 +3816,12 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[339, -472, 616, -298]</P>
+    <P Name="Position">[239, -507, 521, -293]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
     <P Name="BackgroundColor">lightBlue</P>
     <P Name="ZOrder">-12</P>
-    <P Name="FontName">Arial Narrow</P>
-  </Annotation>
-  <Annotation SID="193">
-    <P Name="Name">                                                                                                                                                                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                       </P>
-    <P Name="Position">[338, 73, 615, 247]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="FixedHeight">on</P>
-    <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">lightBlue</P>
-    <P Name="ZOrder">-14</P>
     <P Name="FontName">Arial Narrow</P>
   </Annotation>
   <Annotation SID="194">
@@ -3225,7 +3841,7 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[756, 73, 1033, 247]</P>
+    <P Name="Position">[751, 38, 1083, 247]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
@@ -3250,7 +3866,7 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[754, -467, 1031, -293]</P>
+    <P Name="Position">[754, -507, 1081, -293]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
@@ -3258,15 +3874,417 @@ p, li { white-space: pre-wrap; }
     <P Name="ZOrder">-16</P>
     <P Name="FontName">Arial Narrow</P>
   </Annotation>
-  <Annotation SID="230">
-    <P Name="Name">from Somatosensory Cortex</P>
-    <P Name="Position">[1117, -129, 1307, -110]</P>
+  <Annotation SID="307">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28px; font-weight:600;&quot;&gt;DIVA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1345, -590, 1411, -560]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ForegroundColor">darkGreen</P>
-    <P Name="ZOrder">-17</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">5</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="309">
+    <P Name="Name">                                                                                                                 
+
+
+
+ </P>
+    <P Name="Position">[234, -129, 343, -77]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="DropShadow">on</P>
+    <P Name="ZOrder">-3</P>
+  </Annotation>
+  <Annotation SID="310">
+    <P Name="Name">                                                                                                                 
+
+
+
+ </P>
+    <P Name="Position">[749, -129, 868, -77]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="DropShadow">on</P>
+    <P Name="ZOrder">-4</P>
+  </Annotation>
+  <Annotation SID="311">
+    <P Name="Name">                                                                                                                                                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       </P>
+    <P Name="Position">[186, -552, 623, 292]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">[0.894118, 0.952941, 0.968627]</P>
+    <P Name="ZOrder">-51</P>
+    <P Name="FontName">Arial Narrow</P>
+  </Annotation>
+  <Annotation SID="315">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;right&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; font-style:italic; color:#808080;&quot;&gt;signal to &lt;/span&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;start next&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[914, -30, 1010, -5]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">right</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">6</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="316">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1133, 149, 1231, 162]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">7</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="317">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#000000;&quot;&gt;matching&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#000000;&quot;&gt;motor&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#000000;&quot;&gt;programs&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[756, 148, 804, 183]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-11</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="318">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Helvetica&apos;; font-size:11px; font-style:italic; color:#000000;&quot;&gt;next phonemes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[625, 149, 702, 162]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">13</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="319">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;all phonemes in utternace&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[81, 148, 209, 161]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-13</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="321">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phonemes in next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[304, 59, 468, 72]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">15</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="322">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; font-style:italic; color:#808080;&quot;&gt;signal &lt;/span&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;indicating end of current structure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[292, -485, 491, -471]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">14</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="323">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;all structures in utterance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[84, -396, 208, -383]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">10</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="324">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;next structure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[629, -396, 697, -383]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">8</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="325">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phonemes in&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;next structure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[218, 194, 286, 218]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">16</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="326">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Helvetica&apos;; font-size:11px; font-style:italic; color:#000000;&quot;&gt;tonic signals&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1647, 119, 1709, 132]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-19</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="327">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;transient signals&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1647, 132, 1728, 145]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-20</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="328">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; font-style:italic; color:#808080;&quot;&gt;signal indicating end&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;of current motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[785, -226, 908, -201]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-21</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="329">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;somatosensory/auditory &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;feedback&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1126, -122, 1247, -98]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">9</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="344">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; font-style:italic; color:#808080;&quot;&gt;signal to&lt;/span&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt; start utterance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[89, -572, 209, -558]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-24</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="391">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phoneme durations&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;in next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1127, -397, 1236, -373]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-26</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="392">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phoneme&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;durations&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[758, -397, 815, -373]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">12</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="394">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phoneme slots in next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[820, -481, 1004, -468]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="396">
+    <P Name="Name">                                                                                                                 
+
+
+
+ </P>
+    <P Name="Position">[884, -129, 998, -77]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="DropShadow">on</P>
+    <P Name="ZOrder">-3</P>
+  </Annotation>
+  <Annotation SID="398">
+    <P Name="Name">to debug the model use the syntax: global GODIVA_x; GODIVA_x.control.pause=true;</P>
+    <P Name="Position">[1605, -22, 1985, -10]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="ZOrder">-4</P>
+  </Annotation>
+  <Annotation SID="429">
+    <P Name="Name">                                                                                                                                                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       </P>
+    <P Name="Position">[239, 38, 516, 247]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="ZOrder">-5</P>
+    <P Name="FontName">Arial Narrow</P>
+  </Annotation>
+  <Annotation SID="430">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#000000;&quot;&gt;phoneme&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#000000;&quot;&gt;durations&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[956, -397, 1004, -373]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="465">
+    <P Name="Name">                                                                                                                                                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       </P>
+    <P Name="Position">[1249, -552, 1536, 292]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">[0.964706, 0.964706, 0.964706]</P>
+    <P Name="ZOrder">-78</P>
+    <P Name="FontName">Arial Narrow</P>
   </Annotation>
 </System>
 
@@ -3276,7 +4294,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[8.0, 44.0, 1905.0, 1036.0]</P>
+      <P Name="Location" Class="double">[0.0, 0.0, 1920.0, 1029.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">0</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -3288,38 +4306,248 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
         <P Name="Visible" Class="logical">1</P>
       </Object>
-      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*22">
+      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*38">
         <Object ObjectID="5">
           <P Name="IsActive" Class="logical">1</P>
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">0.882420091324201</P>
-          <P Name="Offset" Class="double">[-91.358814076649423, -547.86545924967663]</P>
-          <P Name="SceneRectInView" Class="double">[-91.358814076649423, -547.86545924967663, 2115.7723156532988, 907.73091849935315]</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">0.85942128707492838</P>
+          <P Name="Offset" Class="double">[-80.4072191882417, -665.04493240965485]</P>
+          <P Name="SceneRectInView" Class="double">[-80.4072191882417, -665.04493240965485, 2189.8456883764834, 1032.0898648193097]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">248</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-827.5, -358.0]</P>
-          <P Name="SceneRectInView" Class="double">[-827.5, -358.0, 1867.0, 801.0]</P>
+          <P Name="LoadSaveID" Class="char">476</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">4.1298076923076925</P>
+          <P Name="Offset" Class="double">[-64.333235866559932, 54.610011641443549]</P>
+          <P Name="SceneRectInView" Class="double">[-64.333235866559932, 54.610011641443549, 455.71129220023283, 214.7799767171129]</P>
         </Object>
         <Object ObjectID="7">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">1</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-809.59375, -311.0]</P>
-          <P Name="SceneRectInView" Class="double">[-809.59375, -311.0, 1867.0, 801.0]</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">4.3178294573643408</P>
+          <P Name="Offset" Class="double">[-64.527322710951552, -13.213644524236997]</P>
+          <P Name="SceneRectInView" Class="double">[-64.527322710951552, -13.213644524236997, 435.8671454219031, 205.427289048474]</P>
         </Object>
         <Object ObjectID="8">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">379</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">1.25</P>
+          <P Name="Offset" Class="double">[-321.20540915395253, -106.86574202496536]</P>
+          <P Name="SceneRectInView" Class="double">[-321.20540915395253, -106.86574202496536, 1505.6, 709.6]</P>
+        </Object>
+        <Object ObjectID="9">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">399</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">4.0</P>
+          <P Name="Offset" Class="double">[-98.910766961651944, -47.85619469026549]</P>
+          <P Name="SceneRectInView" Class="double">[-98.910766961651944, -47.85619469026549, 470.5, 221.75]</P>
+        </Object>
+        <Object ObjectID="10">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">443</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-71.9774541531823, -73.437478810294351]</P>
+          <P Name="SceneRectInView" Class="double">[-71.9774541531823, -73.437478810294351, 1882.0, 887.0]</P>
+        </Object>
+        <Object ObjectID="11">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">432</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">2.0</P>
+          <P Name="Offset" Class="double">[-302.0829725829721, -198.27503607503604]</P>
+          <P Name="SceneRectInView" Class="double">[-302.0829725829721, -198.27503607503604, 941.0, 443.5]</P>
+        </Object>
+        <Object ObjectID="12">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">30</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-835.5, -355.0]</P>
+          <P Name="SceneRectInView" Class="double">[-835.5, -355.0, 1882.0, 794.0]</P>
+        </Object>
+        <Object ObjectID="13">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">70</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">7.925777560657874</P>
+          <P Name="Offset" Class="double">[21.273478494910862, 5.9798803697661782]</P>
+          <P Name="SceneRectInView" Class="double">[21.273478494910862, 5.9798803697661782, 237.45304301017828, 100.17944535073408]</P>
+        </Object>
+        <Object ObjectID="14">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">423</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">6.0</P>
+          <P Name="Offset" Class="double">[-0.083333333333314386, -9.4166666666666856]</P>
+          <P Name="SceneRectInView" Class="double">[-0.083333333333314386, -9.4166666666666856, 313.66666666666669, 132.33333333333334]</P>
+        </Object>
+        <Object ObjectID="15">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">413</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">8.06</P>
+          <P Name="Offset" Class="double">[23.250620347394545, -6.2555831265508672]</P>
+          <P Name="SceneRectInView" Class="double">[23.250620347394545, -6.2555831265508672, 233.49875930521091, 98.511166253101734]</P>
+        </Object>
+        <Object ObjectID="16">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">407</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">4.0</P>
+          <P Name="Offset" Class="double">[-97.75, -36.75]</P>
+          <P Name="SceneRectInView" Class="double">[-97.75, -36.75, 470.5, 198.5]</P>
+        </Object>
+        <Object ObjectID="17">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">40</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-711.0, -343.0]</P>
+          <P Name="SceneRectInView" Class="double">[-711.0, -343.0, 1882.0, 794.0]</P>
+        </Object>
+        <Object ObjectID="18">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">StateflowChart</P>
+          <P Name="LoadSaveID" Class="char">397</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[0.0, 0.0]</P>
+          <P Name="SceneRectInView" Class="double">[0.0, 0.0, 0.0, 0.0]</P>
+        </Object>
+        <Object ObjectID="19">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">295</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.5</P>
+          <P Name="Offset" Class="double">[-474.9834172963898, -239.594458438287]</P>
+          <P Name="SceneRectInView" Class="double">[-474.9834172963898, -239.594458438287, 1254.6666666666667, 529.33333333333337]</P>
+        </Object>
+        <Object ObjectID="20">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">60</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">4.0</P>
+          <P Name="Offset" Class="double">[-87.817745415318285, -51.642448759439119]</P>
+          <P Name="SceneRectInView" Class="double">[-87.817745415318285, -51.642448759439119, 470.5, 198.5]</P>
+        </Object>
+        <Object ObjectID="21">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">220</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.982521847690387</P>
+          <P Name="Offset" Class="double">[-334.39798488664991, -157.0]</P>
+          <P Name="SceneRectInView" Class="double">[-334.39798488664991, -157.0, 949.29596977329982, 400.5]</P>
+        </Object>
+        <Object ObjectID="22">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">3</P>
+          <P Name="Extents" Class="double">[1882.0, 585.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-801.0, -249.0]</P>
+          <P Name="SceneRectInView" Class="double">[-801.0, -249.0, 1882.0, 585.0]</P>
+        </Object>
+        <Object ObjectID="23">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">352</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-835.5, -355.0]</P>
+          <P Name="SceneRectInView" Class="double">[-835.5, -355.0, 1882.0, 794.0]</P>
+        </Object>
+        <Object ObjectID="24">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">348</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">0.49999999999999994</P>
+          <P Name="Offset" Class="double">[-1984.166666666667, -737.00000000000011]</P>
+          <P Name="SceneRectInView" Class="double">[-1984.166666666667, -737.00000000000011, 3764.0000000000005, 1588.0000000000002]</P>
+        </Object>
+        <Object ObjectID="25">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">330</P>
+          <P Name="Extents" Class="double">[1882.0, 585.0]</P>
+          <P Name="ZoomFactor" Class="double">1.5</P>
+          <P Name="Offset" Class="double">[-449.83333333333337, -154.66666666666666]</P>
+          <P Name="SceneRectInView" Class="double">[-449.83333333333337, -154.66666666666666, 1254.6666666666667, 390.0]</P>
+        </Object>
+        <Object ObjectID="26">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">290</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">2.7455197132616487</P>
+          <P Name="Offset" Class="double">[-130.7402088772846, 12.900783289817241]</P>
+          <P Name="SceneRectInView" Class="double">[-130.7402088772846, 12.900783289817241, 685.4804177545692, 289.19843342036552]</P>
+        </Object>
+        <Object ObjectID="27">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">248</P>
+          <P Name="Extents" Class="double">[1882.0, 585.0]</P>
+          <P Name="ZoomFactor" Class="double">1.25</P>
+          <P Name="Offset" Class="double">[-646.89999999999986, -193.29999999999998]</P>
+          <P Name="SceneRectInView" Class="double">[-646.89999999999986, -193.29999999999998, 1505.6, 468.0]</P>
+        </Object>
+        <Object ObjectID="28">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">285</P>
+          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
+          <P Name="ZoomFactor" Class="double">0.85</P>
+          <P Name="Offset" Class="double">[-895.05882352941171, -309.55882352941177]</P>
+          <P Name="SceneRectInView" Class="double">[-895.05882352941171, -309.55882352941177, 2214.1176470588234, 934.11764705882354]</P>
+        </Object>
+        <Object ObjectID="29">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3329,37 +4557,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-289.0, -160.0]</P>
           <P Name="SceneRectInView" Class="double">[-289.0, -160.0, 933.5, 400.5]</P>
         </Object>
-        <Object ObjectID="9">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">60</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">2.0</P>
-          <P Name="Offset" Class="double">[-342.50000000000023, -79.0]</P>
-          <P Name="SceneRectInView" Class="double">[-342.50000000000023, -79.0, 933.5, 400.5]</P>
-        </Object>
-        <Object ObjectID="10">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">70</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">7.9956521739130437</P>
-          <P Name="Offset" Class="double">[23.24904839586732, 5.9798803697661782]</P>
-          <P Name="SceneRectInView" Class="double">[23.24904839586732, 5.9798803697661782, 233.50190320826536, 100.17944535073408]</P>
-        </Object>
-        <Object ObjectID="11">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">40</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-703.0, -242.0]</P>
-          <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 801.0]</P>
-        </Object>
-        <Object ObjectID="12">
+        <Object ObjectID="30">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3369,17 +4567,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -242.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 592.0]</P>
         </Object>
-        <Object ObjectID="13">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">220</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">2.0</P>
-          <P Name="Offset" Class="double">[-326.5, -157.0]</P>
-          <P Name="SceneRectInView" Class="double">[-326.5, -157.0, 933.5, 400.5]</P>
-        </Object>
-        <Object ObjectID="14">
+        <Object ObjectID="31">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3389,7 +4577,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-698.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-698.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="15">
+        <Object ObjectID="32">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3399,7 +4587,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -242.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="16">
+        <Object ObjectID="33">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3409,7 +4597,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-698.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-698.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="17">
+        <Object ObjectID="34">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3419,7 +4607,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-883.227272727273, -297.04545454545462]</P>
           <P Name="SceneRectInView" Class="double">[-883.227272727273, -297.04545454545462, 2121.5909090909095, 910.22727272727286]</P>
         </Object>
-        <Object ObjectID="18">
+        <Object ObjectID="35">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3429,7 +4617,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-683.0, -290.0]</P>
           <P Name="SceneRectInView" Class="double">[-683.0, -290.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="19">
+        <Object ObjectID="36">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3439,7 +4627,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="20">
+        <Object ObjectID="37">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3449,7 +4637,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[23.24904839586732, -7.0897226753670424]</P>
           <P Name="SceneRectInView" Class="double">[23.24904839586732, -7.0897226753670424, 233.50190320826536, 100.17944535073408]</P>
         </Object>
-        <Object ObjectID="21">
+        <Object ObjectID="38">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3459,7 +4647,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-548.80000000000007, -268.8]</P>
           <P Name="SceneRectInView" Class="double">[-548.80000000000007, -268.8, 1493.6, 640.8]</P>
         </Object>
-        <Object ObjectID="22">
+        <Object ObjectID="39">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3469,7 +4657,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-177.83217905405388, 27.065146396396287]</P>
           <P Name="SceneRectInView" Class="double">[-177.83217905405388, 27.065146396396287, 622.33333333333337, 267.0]</P>
         </Object>
-        <Object ObjectID="23">
+        <Object ObjectID="40">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3479,7 +4667,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[22.944535073409469, -15.399011011419248]</P>
           <P Name="SceneRectInView" Class="double">[22.944535073409469, -15.399011011419248, 274.11092985318106, 117.60195758564436]</P>
         </Object>
-        <Object ObjectID="24">
+        <Object ObjectID="41">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3489,7 +4677,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-517.44285714285672, -171.56190476190474]</P>
           <P Name="SceneRectInView" Class="double">[-517.44285714285672, -171.56190476190474, 1244.6666666666667, 394.66666666666669]</P>
         </Object>
-        <Object ObjectID="25">
+        <Object ObjectID="42">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -3499,19 +4687,21 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -242.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 592.0]</P>
         </Object>
-        <Object ObjectID="26">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">30</P>
-          <P Name="Extents" Class="double">[1867.0, 801.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-827.5, -358.0]</P>
-          <P Name="SceneRectInView" Class="double">[-827.5, -358.0, 1867.0, 801.0]</P>
-        </Object>
       </Array>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
-        <Object ObjectID="27">
+        <Object ObjectID="43">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
+          <P Name="Width" Class="int32">640</P>
+          <P Name="Height" Class="int32">480</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="44">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -3524,20 +4714,8 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
-        <Object ObjectID="28">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABkAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiAD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAB3EAAADQ/AEAAAAB+/////8AAAAAAP////8AAAFZAP///wAAB3EAAANeAAAAAQAAAAIAAAABAAAAAvwAAAAA</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABkAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAiAD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAB4AAAADQ/AEAAAAC/AAAAAAAAAeAAAAAAAD////6/////wEAAAAA+/////8AAAAAAAAAB4AAAAFZAP///wAAB4AAAAO0AAAAAQAAAAIAAAABAAAAAvwAAAAA</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">ca57f826-e603-4d62-904f-7b5dc125f855</P>
     </Object>

@@ -1,10 +1,9 @@
-function godiva_WTACOMPlayer(block)
-% godiva_WTACOMPlayer (winner-take-all competitive layer) parameters:
+function godiva_WTACOMPFORWARDlayer(block)
+% godiva_WTACOMPFORWARD (winner-take-all competitive layer without back-inhibition) parameters:
 %   1: block ID (string)
 %   2: number of independent zones in input vector (nz)
 %   3: noise level
 %   4: display (1/0)
-%   5: normalize inputs (1/0)
 %    
 % Fullmodel description:
 %   Inputs:
@@ -25,10 +24,8 @@ function godiva_WTACOMPlayer(block)
 %      Plan-cells (multiplied by the 'Gate' term) is stored in the
 %      Choice-cells and a winner-takes-all procedure normalizes their
 %      activation (maximum-valued cell is set to 1, the rest are set to 0),
-%      followed by the back-inhibition of the original maximum-valued
-%      Plan-cell activation. Computations are performed separately within each
-%      'zone' of the layer (i.e. each 'zone' computes the maximum among the
-%      cells within the same 'zone')
+%      Computations are performed separately within each 'zone' of the layer 
+%      (i.e. each 'zone' computes the maximum among the cells within the same 'zone')
 %      3: When the 'Inhibition' input is nonzero, the correspoinding
 %      choice-cells activation is inhibited (set and maintained to zero
 %      until the inhibition stops). 
@@ -42,8 +39,8 @@ end
 function setup(block)
 
   % Register number of dialog parameters   
-  block.NumDialogPrms = 5;
-  block.DialogPrmsTunable = {'Nontunable','Nontunable','Nontunable','Nontunable','Nontunable'};
+  block.NumDialogPrms = 4;
+  block.DialogPrmsTunable = {'Nontunable','Nontunable','Nontunable','Nontunable'};
 
   % Register number of input and output ports
   block.NumInputPorts  = 3;
@@ -149,42 +146,30 @@ function Update(block)
   Inp=max(0,block.InputPort(2).Data);
   Gate=block.InputPort(3).Data;
   Inhibition=block.InputPort(1).Data;
-  if numel(Gate)==1&&1<numel(Inp), Gate=ones(size(Inp)); end % if no gate input, assume all gates open
-  if numel(Inhibition)==1&&1<numel(Inp), Inhibition=repmat(Inhibition,size(Inp)); end % if no inhibition input, assume no inhibition
+  if numel(Gate)==1&numel(Gate)<numel(Inp), Gate=repmat(Gate,size(Inp)); end % note: if no input gate=0
+  if numel(Inhibition)==1&&1<numel(Inp), Inhibition=repmat(Inhibition,size(Inp)); end % note: if no input inhibition=0
   M1=block.Dwork(1).Data;
   M2=block.Dwork(2).Data;
   columns=block.Dwork(3).Data;
-  donoise=block.DialogPrm(3).Data;
   dodisp=block.DialogPrm(4).Data;
-  donorm=block.DialogPrm(5).Data;
 
   % Choice Layer excitation
-  if any(Gate)&&~any(M2), 
-      t=M1.*Gate;
-      tmax=accumarray(columns,t,[],@max);
-      if donorm, M2=double((tmax(columns)==t)&(t>0));
-      else       M2=t.*double((tmax(columns)==t).*(t>0));
-      end
-  end
+  t=M1.*Gate;
+  tmax=accumarray(columns,t,[],@max);
+  M2=double((tmax(columns)==t)&(t>0));
   % Choice Layer inhibition
   if any(Inhibition),
       t=M2.*Inhibition;
       M2(t>0)=0;
   end
   % Plan Layer excitation
-  if any(Inp), 
-      t=Inp;
-      if donoise, t=max(0,t+donoise*randn(size(Inp))); end
-      if donorm
-          tsum=accumarray(columns,t);
-          M1 = t./max(eps,tsum(columns));
-      else
-          M1 = t;
-      end
-  end
+  t=Inp;
+  if block.DialogPrm(3).Data, t=max(0,t+block.DialogPrm(3).Data*randn(size(Inp))); end
   % Plan Layer inhibition
-  M1(M2>0)=0;
-  if donorm
+  %M1(M2>0)=0;
+  if 1,
+      M1 = t;
+  else % normalize input
       t=M1;
       tsum=accumarray(columns,t);
       M1 = t./max(eps,tsum(columns));

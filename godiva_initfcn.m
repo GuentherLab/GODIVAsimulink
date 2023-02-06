@@ -22,8 +22,8 @@ GODIVA_x.network.phonemes.phonemetypes=c(idx);
 idx=find(a);
 GODIVA_x.network.frames.index=a(idx);
 GODIVA_x.network.frames.labels=b(idx);
-GODIVA_x.network.frames.phonemetypes=[c1(idx),c2(idx),c3(idx),c4(idx),c5(idx),c6(idx),c7(idx)];
-    
+GODIVA_x.network.frames.phonemetypes=[c1(idx),c2(idx),c3(idx),c4(idx),c5(idx),c6(idx),c7(idx)];   
+
 [a,b,c1,c2,c3,c4,c5,c6,c7]=textread('godiva_productions.csv','%n%s%s%s%s%s%s%s%s%*[^\n]','delimiter',',','headerlines',1);
 idx=find(a);
 GODIVA_x.network.productions.index=a(idx);
@@ -34,6 +34,8 @@ n_positions=7;
 n_phonemes=numel(GODIVA_x.network.phonemes.index);
 n_frames=numel(GODIVA_x.network.frames.index);
 n_productions=numel(GODIVA_x.network.productions.index);
+
+GODIVA_x.network.positions.labels=arrayfun(@(n)sprintf('P%d',n),1:n_positions, 'uni',0);
 
 % loads target information
 a=godiva_readtargetfile('godiva_targets.txt');
@@ -102,23 +104,55 @@ end
 W=reshape(W,[n_frames*m_frames,n_phonemes*m_phonemes*n_positions]);
 save('godiva_weights_PreSMA2IFS.mat','W');
 
-W=zeros(n_phonemes,m_phonemes,n_positions,n_productions);
+W=zeros(n_frames,m_frames,n_positions);
+c=GODIVA_x.network.frames.phonemetypes;
+nv=strmatch('V',GODIVA_x.network.phonemes.phonemetypes,'exact');
+nc=strmatch('C',GODIVA_x.network.phonemes.phonemetypes,'exact');
+for n1=1:n_frames,
+    for n2=1:n_positions,
+        if isequal(c{n1,n2},'C'),
+            W(n1,:,n2)=0.020;
+        elseif isequal(c{n1,n2},'V'),
+            W(n1,:,n2)=0.100;
+        end
+    end
+end
+W=reshape(W,[n_frames*m_frames,n_positions]);
+save('godiva_weights_PreSMA2SMA.mat','W');
+
+W=zeros([n_phonemes,m_phonemes,n_positions,n_productions,n_positions]);
 c=GODIVA_x.network.productions.phonemes;
 for n1=1:n_productions,
-    n=0;for n2=1:n_positions,n=n+~isempty(c{n1,n2});end
-    for n2=1:n_positions,
-        if ~isempty(c{n1,n2}),
-            idx=strmatch(c{n1,n2},GODIVA_x.network.phonemes.labels,'exact');
-            if ~numel(idx), error(['reading godiva_productions.csv file: invalid phoneme descriptor ',c{n1,n2}]); end
-            W(idx,:,n2,n1)=1/n+1/n_positions*1/(2^n2);
-            %if n==1, for n3=1:n_positions, W(idx,:,n3,n1)=1/n+1/n_positions*1/(2^n3); end; end
+    n=0;n0=0;for n2=1:n_positions,n=n+~isempty(c{n1,n2}); if n==1&&~n0, n0=n2; end; end % n0 = first slot in this production; n = number of phonemes in this production
+    for nn=1:n
+        n2=n0+nn-1;
+        idx=strmatch(c{n1,n2},GODIVA_x.network.phonemes.labels,'exact');
+        if ~numel(idx), error(['reading godiva_productions.csv file: invalid phoneme descriptor ',c{n1,n2}]); end
+        for dn=0:n_positions-n
+            W(idx,:,nn+dn,n1,1+dn)=1/n+1/n_positions*1/(2^(nn+dn));
         end
+            %W(idx,:,n2+n3-1,n1)=1/n+1/n_positions*1/(2^n2);
+            %if n==1, for n3=1:n_positions, W(idx,:,n3,n1)=1/n+1/n_positions*1/(2^n3); end; end
     end
     if ~rem(n1,10),waitbar(n1/n_productions,hw);end
 end
-W=reshape(W,[n_phonemes*m_phonemes*n_positions,n_productions]);
+W=reshape(W,[n_phonemes*m_phonemes*n_positions,n_productions*n_positions]);
 save('godiva_weights_IFS2PMC.mat','W');
 W=W';
 save('godiva_weights_PMC2IFS.mat','W');
+
+W=zeros([n_positions,n_productions,n_positions]);
+c=GODIVA_x.network.productions.phonemes;
+for n1=1:n_productions,
+    n=0;n0=0;for n2=1:n_positions,n=n+~isempty(c{n1,n2}); if n==1&&~n0, n0=n2; end; end % n0 = first slot in this production; n = number of phonemes in this production
+    for nn=1:n
+        for dn=0:n_positions-n
+            W(nn+dn,n1,1+dn)=1;%1/n+1/n_positions*1/(2^n2);
+        end
+    end
+end
+W=reshape(W,[n_positions,n_productions*n_positions])';
+save('godiva_weights_PMC2SMA.mat','W');
+
 close(hw);    
 
