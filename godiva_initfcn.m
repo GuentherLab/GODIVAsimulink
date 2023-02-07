@@ -111,7 +111,7 @@ nc=strmatch('C',GODIVA_x.network.phonemes.phonemetypes,'exact');
 for n1=1:n_frames,
     for n2=1:n_positions,
         if isequal(c{n1,n2},'C'),
-            W(n1,:,n2)=0.020;
+            W(n1,:,n2)=0.040;
         elseif isequal(c{n1,n2},'V'),
             W(n1,:,n2)=0.100;
         end
