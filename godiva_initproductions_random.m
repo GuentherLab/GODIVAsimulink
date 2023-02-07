@@ -29,7 +29,8 @@ for nv=1:3 % # of vowels
     end
 end
 fh=fopen('godiva_frames.csv','wt');
-fprintf(fh,'index,label,phoneme1,phoneme2,phoneme3,phoneme4,phoneme5,phoneme6,phoneme7\n');
+%fprintf(fh,'index,label,phoneme1,phoneme2,phoneme3,phoneme4,phoneme5,phoneme6,phoneme7\n');
+fprintf(fh,'index,label'); for n1=1:Np,fprintf(fh,',phoneme%d',n1); end; fprintf(fh,'\n');
 for n1=1:numel(N),
     fprintf(fh,'%d,%s',n1,N{n1});
     for n2=1:numel(N{n1}), fprintf(fh,',%c',N{n1}(n2)); end
@@ -98,7 +99,8 @@ for n1=1:numel(a2) % each frame
 end
 
 fh=fopen('godiva_productions.csv','wt');
-fprintf(fh,'index,label,phoneme1,phoneme2,phoneme3,phoneme4,phoneme5,phoneme6,phoneme7\n');
+%fprintf(fh,'index,label,phoneme1,phoneme2,phoneme3,phoneme4,phoneme5,phoneme6,phoneme7\n');
+fprintf(fh,'index,label'); for n1=1:Np,fprintf(fh,',phoneme%d',n1); end; fprintf(fh,'\n');
 for n1=1:numel(N),
     fprintf(fh,'%d,%s',n1,sprintf('%s',b1{N{n1}}));
     for n2=1:numel(N{n1}), fprintf(fh,',%s',b1{N{n1}(n2)}); end

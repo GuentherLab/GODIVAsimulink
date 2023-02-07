@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2011-03-06T23:44:35Z</dcterms:created>
   <dc:creator>alfnie</dc:creator>
   <cp:lastModifiedBy>alfnie</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-02-06T00:56:13Z</dcterms:modified>
-  <cp:revision>28.358</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-02-06T17:06:01Z</dcterms:modified>
+  <cp:revision>28.382</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -117,8 +117,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">597549370</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:28.358&gt;</P>
+      <P Name="RTWModifiedTimeStamp">597607558</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:28.382&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -1008,34 +1008,34 @@ To Zero</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="58ac1135-b1d1-4a48-a1a8-e5835f4ff175">
-    <Interface type="Interface" uuid="d4f1ae36-9761-4c8c-970e-4b328b04a07c"/>
+  <System type="System" uuid="21f0b131-132c-4f54-b75e-353084c66a76">
+    <Interface type="Interface" uuid="a7f9bca0-7d66-4a55-b0b3-246e598c8050"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="6be16c3d-b49c-4284-8a6d-8a866613c10a">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="90e5aa12-1210-458e-935f-06b9284191a4">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="9cb17cf5-8801-4a21-8b96-c5fa15eb0da2"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="e47023b3-527c-45d4-8eb8-aceee197e5ce">
-      <context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2"/>
+    <rootTask type="sltp.mm.core.Task" uuid="94854fd2-30ae-4491-b063-92217e955afb">
+      <context type="sltp.mm.core.Context" uuid="6be16c3d-b49c-4284-8a6d-8a866613c10a"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="4070c37b-2785-4f37-8644-b906fbf87812">
-        <tasks type="sltp.mm.core.Task" uuid="57b09b9d-2396-46b8-8804-f1f48c892819">
+      <subgraph type="sltp.mm.core.Graph" uuid="1cf823bb-5b81-4719-b8d3-4f6dc4da6ad5">
+        <tasks type="sltp.mm.core.Task" uuid="eead4840-179d-4768-93ad-593c4252d74d">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="4445b57e-5d3d-446a-adb6-078c6fe4c6c2"/>
+          <context type="sltp.mm.core.Context" uuid="6be16c3d-b49c-4284-8a6d-8a866613c10a"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="ea0e1b7d-e29d-4feb-8b26-3ec430ad0afe">
+          <rates type="sltp.mm.core.Rate" uuid="f6baa8a0-780a-4f0d-97b1-286655420d3c">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -1045,7 +1045,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="edc970f6-d323-4f86-b96e-e6df61650047">
+          <rates type="sltp.mm.core.Rate" uuid="73e8aab7-5fad-45f4-af85-ad761c1bb392">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -1171,7 +1171,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="system_1" Target="system_1.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_30" Target="system_30.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
-  <Relationship Id="system_352" Target="system_352.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_368" Target="system_368.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_379" Target="system_379.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_399" Target="system_399.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
@@ -1179,6 +1178,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
   <Relationship Id="system_423" Target="system_423.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_47" Target="system_47.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_476" Target="system_476.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_492" Target="system_492.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_70" Target="system_70.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
@@ -1671,33 +1671,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_30.xml
     <P Name="ZOrder">1</P>
     <P Name="Src">31#out:1</P>
     <P Name="Dst">32#in:1</P>
-  </Line>
-</System>
-
-__MWOPC_PART_BEGIN__ /simulink/systems/system_352.xml
-<?xml version="1.0" encoding="utf-8"?>
-<System>
-  <P Name="Location">[0, 0, 1920, 1029]</P>
-  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="SetExecutionDomain">off</P>
-  <P Name="ExecutionDomainType">Deduce</P>
-  <P Name="SimulinkSubDomain">Simulink</P>
-  <Block BlockType="Inport" Name="In1" SID="353">
-    <P Name="Position">[25, 28, 55, 42]</P>
-    <P Name="ZOrder">-1</P>
-  </Block>
-  <Block BlockType="ToWorkspace" Name="to workspace" SID="354">
-    <P Name="Ports">[1]</P>
-    <P Name="Position">[90, 25, 185, 45]</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="VariableName">target_duration</P>
-    <P Name="MaxDataPoints">inf</P>
-    <P Name="SampleTime">-1</P>
-  </Block>
-  <Line>
-    <P Name="ZOrder">1</P>
-    <P Name="Src">353#out:1</P>
-    <P Name="Dst">354#in:1</P>
   </Line>
 </System>
 
@@ -2464,6 +2437,33 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_476.xml
   </Line>
 </System>
 
+__MWOPC_PART_BEGIN__ /simulink/systems/system_492.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1920, 1029]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="493">
+    <P Name="Position">[25, 28, 55, 42]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="ToWorkspace" Name="to workspace" SID="494">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[90, 25, 185, 45]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="VariableName">target_production</P>
+    <P Name="MaxDataPoints">inf</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">493#out:1</P>
+    <P Name="Dst">494#in:1</P>
+  </Line>
+</System>
+
 __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
@@ -2719,7 +2719,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ZoomFactor">86</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">479</P>
+  <P Name="SIDHighWatermark">494</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="SubSystem" Name="(&apos;Word&apos; input)" SID="1">
     <P Name="Ports">[0, 3]</P>
@@ -2739,33 +2739,35 @@ port_label(&apos;output&apos;,3,&apos;Phonemes&apos;)
   </Block>
   <Block BlockType="SubSystem" Name="(to Motor cortex)" SID="30">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[1405, 145, 1520, 175]</P>
+    <P Name="Position">[1240, 144, 1360, 176]</P>
     <P Name="ZOrder">-2</P>
     <P Name="ForegroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
-      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;Motor program selection&apos;)</Display>
+      <Display IconFrame="off">disp(&apos;Motor program&apos;)</Display>
     </Mask>
     <System Ref="system_30"/>
   </Block>
-  <Block BlockType="SubSystem" Name="(to Motor cortex)1" SID="352">
+  <Block BlockType="SubSystem" Name="(to Motor cortex)1" SID="492">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[1405, -400, 1520, -370]</P>
-    <P Name="ZOrder">65</P>
+    <P Name="Position">[1363, 145, 1487, 175]</P>
+    <P Name="ZOrder">113</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
     <P Name="ForegroundColor">darkGreen</P>
-    <P Name="NameLocation">top</P>
+    <P Name="NameLocation">right</P>
     <P Name="ShowName">off</P>
     <P Name="RequestExecContextInheritance">off</P>
     <Mask>
-      <Display IconFrame="off">port_label(&apos;input&apos;,1,&apos;Motor program duration&apos;)</Display>
+      <Display IconFrame="off">disp(&apos;Duration&apos;)</Display>
     </Mask>
-    <System Ref="system_352"/>
+    <System Ref="system_492"/>
   </Block>
-  <Block BlockType="Memory" Name="Caudate / GP" SID="33">
-    <P Name="Position">[405, -117, 420, -103]</P>
-    <P Name="ZOrder">-3</P>
+  <Block BlockType="Memory" Name="Caudate" SID="480">
+    <P Name="Position">[430, -147, 445, -133]</P>
+    <P Name="ZOrder">110</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
     <P Name="FontWeight">bold</P>
@@ -2852,7 +2854,7 @@ port_label(&apos;output&apos;,3,&apos;Phonemes&apos;)
   </Block>
   <Block BlockType="Delay" Name="Delay6" SID="39">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1625, -90, 1630, -80]</P>
+    <P Name="Position">[1625, -65, 1630, -55]</P>
     <P Name="ZOrder">-9</P>
     <P Name="BackgroundColor">green</P>
     <P Name="NameLocation">top</P>
@@ -2899,7 +2901,7 @@ port_label(&apos;output&apos;,3,&apos;Phonemes&apos;)
   </Block>
   <Block BlockType="SubSystem" Name="Detect&#xA;DropToZero1" SID="47">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1620, -72, 1635, -58]</P>
+    <P Name="Position">[1620, -47, 1635, -33]</P>
     <P Name="ZOrder">-11</P>
     <P Name="BackgroundColor">darkGreen</P>
     <P Name="NameLocation">top</P>
@@ -2913,7 +2915,7 @@ port_label(&apos;output&apos;,3,&apos;Phonemes&apos;)
   </Block>
   <Block BlockType="M-S-Function" Name="FO to IFS1" SID="56">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1610, -115, 1645, -95]</P>
+    <P Name="Position">[1610, -90, 1645, -70]</P>
     <P Name="ZOrder">-14</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">yellow</P>
@@ -2958,6 +2960,26 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 </Display>
     </Mask>
   </Block>
+  <Block BlockType="Memory" Name="GPa" SID="33">
+    <P Name="Position">[380, -147, 395, -133]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="FontSize">14</P>
+    <P Name="FontWeight">bold</P>
+    <P Name="FontAngle">italic</P>
+    <P Name="InheritSampleTime">on</P>
+    <P Name="LinearizeAsDelay">on</P>
+  </Block>
+  <Block BlockType="Memory" Name="GPb" SID="122">
+    <P Name="Position">[905, -147, 920, -133]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="FontSize">14</P>
+    <P Name="FontWeight">bold</P>
+    <P Name="FontAngle">italic</P>
+    <P Name="InheritSampleTime">on</P>
+    <P Name="LinearizeAsDelay">on</P>
+  </Block>
   <Block BlockType="M-S-Function" Name="IFS to FO" SID="57">
     <P Name="Ports">[1, 1]</P>
     <P Name="Position">[715, 151, 745, 169]</P>
@@ -2974,7 +2996,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="M-S-Function" Name="PreSMA to IFS" SID="59">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[475, -119, 505, -101]</P>
+    <P Name="Position">[475, -149, 505, -131]</P>
     <P Name="ZOrder">-17</P>
     <P Name="BlockMirror">on</P>
     <P Name="BackgroundColor">yellow</P>
@@ -3030,9 +3052,9 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     </Mask>
     <System Ref="system_423"/>
   </Block>
-  <Block BlockType="Memory" Name="Putamen / GP" SID="122">
-    <P Name="Position">[930, -117, 945, -103]</P>
-    <P Name="ZOrder">2</P>
+  <Block BlockType="Memory" Name="Putamen" SID="481">
+    <P Name="Position">[955, -147, 970, -133]</P>
+    <P Name="ZOrder">111</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
     <P Name="FontWeight">bold</P>
@@ -3074,7 +3096,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="Scope" Name="Scope" SID="405">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[1315, -181, 1345, -149]</P>
+    <P Name="Position">[1290, -181, 1320, -149]</P>
     <P Name="ZOrder">82</P>
     <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-0.01152&apos;,&apos;MaxYLimReal&apos;,&apos;0.0201&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;0.0201&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;timer&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;-0.01152&apos;,&apos;MaxYLimReal&apos;,&apos;0.0201&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;0.0201&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2022a&apos;)),&apos;Version&apos;,&apos;2022a&apos;,&apos;Position&apos;,[2048 361 1528 420])</P>
     <P Name="NumInputPorts">1</P>
@@ -3089,7 +3111,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="Sum" Name="Sum of&#xA;Elements1" SID="406">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1273, -250, 1287, -240]</P>
+    <P Name="Position">[1248, -250, 1262, -240]</P>
     <P Name="ZOrder">107</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
@@ -3110,9 +3132,19 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
       </DialogControl>
     </Mask>
   </Block>
+  <Block BlockType="Memory" Name="VA" SID="81">
+    <P Name="Position">[280, -147, 295, -133]</P>
+    <P Name="ZOrder">-20</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="FontSize">14</P>
+    <P Name="FontWeight">bold</P>
+    <P Name="FontAngle">italic</P>
+    <P Name="InheritSampleTime">on</P>
+    <P Name="LinearizeAsDelay">on</P>
+  </Block>
   <Block BlockType="SubSystem" Name="VA Thalamus1" SID="70">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1620, -52, 1635, -38]</P>
+    <P Name="Position">[1620, -27, 1635, -13]</P>
     <P Name="ZOrder">-19</P>
     <P Name="BackgroundColor">darkGreen</P>
     <P Name="ShowName">off</P>
@@ -3122,18 +3154,8 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     </Mask>
     <System Ref="system_70"/>
   </Block>
-  <Block BlockType="Memory" Name="VA thalamus" SID="81">
-    <P Name="Position">[280, -117, 295, -103]</P>
-    <P Name="ZOrder">-20</P>
-    <P Name="BlockMirror">on</P>
-    <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-    <P Name="FontAngle">italic</P>
-    <P Name="InheritSampleTime">on</P>
-    <P Name="LinearizeAsDelay">on</P>
-  </Block>
-  <Block BlockType="Memory" Name="VL thalamus" SID="123">
-    <P Name="Position">[805, -117, 820, -103]</P>
+  <Block BlockType="Memory" Name="VL" SID="123">
+    <P Name="Position">[805, -147, 820, -133]</P>
     <P Name="ZOrder">3</P>
     <P Name="BlockMirror">on</P>
     <P Name="FontSize">14</P>
@@ -3219,7 +3241,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Block>
   <Block BlockType="SubSystem" Name="timer" SID="476">
     <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[1272, -215, 1288, -190]</P>
+    <P Name="Position">[1247, -215, 1263, -190]</P>
     <P Name="ZOrder">106</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
@@ -3236,7 +3258,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">8</P>
     <P Name="Src">38#out:1</P>
-    <P Name="Points">[0, 45]</P>
+    <P Name="Points">[0, 15]</P>
     <P Name="Dst">59#in:1</P>
   </Line>
   <Line>
@@ -3247,7 +3269,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">14</P>
     <P Name="Src">59#out:1</P>
-    <P Name="Dst">33#in:1</P>
+    <P Name="Dst">480#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">15</P>
@@ -3292,7 +3314,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">422</P>
     <P Name="Src">1#out:1</P>
-    <P Name="Points">[63, 0; 0, -155; 697, 0]</P>
+    <P Name="Points">[63, 0; 0, -138; 697, 0]</P>
     <P Name="Dst">283#in:1</P>
   </Line>
   <Line>
@@ -3366,14 +3388,15 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   <Line>
     <P Name="ZOrder">563</P>
     <P Name="Src">399#out:1</P>
-    <P Name="Points">[229, 0]</P>
+    <P Name="Points">[204, 0; 0, 63]</P>
     <Branch>
-      <P Name="ZOrder">1000</P>
-      <P Name="Dst">406#in:1</P>
+      <P Name="ZOrder">1038</P>
+      <P Name="Points">[170, 0]</P>
+      <P Name="Dst">492#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">996</P>
-      <P Name="Dst">352#in:1</P>
+      <P Name="ZOrder">1012</P>
+      <P Name="Dst">406#in:1</P>
     </Branch>
   </Line>
   <Line>
@@ -3454,13 +3477,13 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="Src">476#out:1</P>
     <P Name="Points">[0, 20]</P>
     <Branch>
-      <P Name="ZOrder">952</P>
-      <P Name="Dst">405#in:1</P>
+      <P Name="ZOrder">1002</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">481#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">951</P>
-      <P Name="Points">[0, 55]</P>
-      <P Name="Dst">122#in:1</P>
+      <P Name="ZOrder">952</P>
+      <P Name="Dst">405#in:1</P>
     </Branch>
   </Line>
   <Line>
@@ -3468,39 +3491,28 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
     <P Name="Src">406#out:1</P>
     <P Name="Dst">476#in:1</P>
   </Line>
+  <Line>
+    <P Name="ZOrder">1001</P>
+    <P Name="Src">480#out:1</P>
+    <P Name="Dst">33#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">1003</P>
+    <P Name="Src">481#out:1</P>
+    <P Name="Dst">122#in:1</P>
+  </Line>
   <Annotation SID="83">
     <P Name="Name">                                                                                                                 
 
 
 
  </P>
-    <P Name="Position">[362, -129, 471, -77]</P>
+    <P Name="Position">[362, -159, 471, -107]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="DropShadow">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
     <P Name="ZOrder">-1</P>
-  </Annotation>
-  <Annotation SID="84">
-    <P Name="Name">Cerebral cortex</P>
-    <P Name="Position">[1647, 55, 1751, 74]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ForegroundColor">lightBlue</P>
-    <P Name="ZOrder">-2</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
-  </Annotation>
-  <Annotation SID="85">
-    <P Name="Name">BG / thalamus</P>
-    <P Name="Position">[1647, 74, 1743, 93]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="ForegroundColor">gray</P>
-    <P Name="ZOrder">-3</P>
-    <P Name="FontName">Arial</P>
-    <P Name="FontSize">14</P>
-    <P Name="FontWeight">bold</P>
   </Annotation>
   <Annotation SID="86">
     <P Name="Name">godiva_phonemes.csv</P>
@@ -3583,56 +3595,56 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="96">
     <P Name="Name">to define new &apos;utterance&apos; inputs</P>
-    <P Name="Position">[1766, -303, 1904, -291]</P>
+    <P Name="Position">[1766, -318, 1904, -306]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-14</P>
   </Annotation>
   <Annotation SID="97">
     <P Name="Name">2. Click the &apos;Play&apos; icon in the menubar to start the simulation </P>
-    <P Name="Position">[1601, -283, 1869, -271]</P>
+    <P Name="Position">[1601, -298, 1869, -286]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-15</P>
   </Annotation>
   <Annotation SID="98">
     <P Name="Name">INSTRUCTIONS</P>
-    <P Name="Position">[1592, -323, 1668, -311]</P>
+    <P Name="Position">[1592, -338, 1668, -326]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-16</P>
   </Annotation>
   <Annotation SID="99">
     <P Name="Name">Generates a transient signal when input drops to zero</P>
-    <P Name="Position">[1671, -73, 1909, -61]</P>
+    <P Name="Position">[1671, -48, 1909, -36]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-17</P>
   </Annotation>
   <Annotation SID="100">
     <P Name="Name">NOTES</P>
-    <P Name="Position">[1592, -133, 1628, -121]</P>
+    <P Name="Position">[1592, -108, 1628, -96]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-18</P>
   </Annotation>
   <Annotation SID="101">
     <P Name="Name">Generates a transient signal when input raises from zero</P>
-    <P Name="Position">[1669, -53, 1921, -41]</P>
+    <P Name="Position">[1669, -28, 1921, -16]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-19</P>
   </Annotation>
   <Annotation SID="102">
     <P Name="Name">Temporal delay</P>
-    <P Name="Position">[1671, -93, 1740, -81]</P>
+    <P Name="Position">[1671, -68, 1740, -56]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-20</P>
   </Annotation>
   <Annotation SID="103">
     <P Name="Name">Synaptic weights</P>
-    <P Name="Position">[1667, -113, 1743, -101]</P>
+    <P Name="Position">[1667, -88, 1743, -76]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-21</P>
@@ -3651,7 +3663,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="109">
     <P Name="Name">&apos;Utterance&apos; input</P>
-    <P Name="Position">[1677, -304, 1750, -292]</P>
+    <P Name="Position">[1677, -319, 1750, -307]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="HorizontalAlignment">left</P>
     <P Name="ForegroundColor">darkGreen</P>
@@ -3661,7 +3673,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
   </Annotation>
   <Annotation SID="110">
     <P Name="Name">1. Click the link </P>
-    <P Name="Position">[1595, -303, 1666, -291]</P>
+    <P Name="Position">[1595, -318, 1666, -306]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-28</P>
@@ -3696,7 +3708,7 @@ patch(.625+.8*([0.50,0.51,0.55,0.60,0.67,0.75,0.75,0.67,0.60,0.55,0.51,0.50]-.62
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Sequential Structure Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[276, -284, 485, -266]</P>
+    <P Name="Position">[275, -523, 484, -505]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3710,7 +3722,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Phonological Content Buffer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[276, 256, 494, 274]</P>
+    <P Name="Position">[267, 22, 485, 40]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3724,7 +3736,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Speech Sound Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[839, 256, 988, 274]</P>
+    <P Name="Position">[833, 22, 982, 40]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3749,11 +3761,11 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[702, -552, 1124, 292]</P>
+    <P Name="Position">[672, -617, 1159, 262]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">[0.964706, 0.964706, 0.964706]</P>
+    <P Name="BackgroundColor">[0.941176, 0.901961, 0.843137]</P>
     <P Name="ZOrder">-40</P>
     <P Name="FontName">Arial Narrow</P>
   </Annotation>
@@ -3763,7 +3775,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16px; font-weight:600;&quot;&gt;Initiation Map&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[853, -284, 958, -266]</P>
+    <P Name="Position">[865, -523, 970, -505]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3791,7 +3803,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28px; font-weight:600;&quot;&gt;Motor Loop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[868, -590, 1023, -560]</P>
+    <P Name="Position">[848, -590, 1003, -560]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3880,7 +3892,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28px; font-weight:600;&quot;&gt;DIVA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1345, -590, 1411, -560]</P>
+    <P Name="Position">[1315, -590, 1381, -560]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3894,27 +3906,12 @@ p, li { white-space: pre-wrap; }
 
 
  </P>
-    <P Name="Position">[234, -129, 343, -77]</P>
+    <P Name="Position">[234, -159, 343, -107]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="DropShadow">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
     <P Name="ZOrder">-3</P>
-  </Annotation>
-  <Annotation SID="310">
-    <P Name="Name">                                                                                                                 
-
-
-
- </P>
-    <P Name="Position">[749, -129, 868, -77]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="FixedHeight">on</P>
-    <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="DropShadow">on</P>
-    <P Name="ZOrder">-4</P>
   </Annotation>
   <Annotation SID="311">
     <P Name="Name">                                                                                                                                                                          
@@ -3933,11 +3930,11 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[186, -552, 623, 292]</P>
+    <P Name="Position">[186, -622, 653, 262]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">[0.894118, 0.952941, 0.968627]</P>
+    <P Name="BackgroundColor">[0.839216, 0.854902, 0.898039]</P>
     <P Name="ZOrder">-51</P>
     <P Name="FontName">Arial Narrow</P>
   </Annotation>
@@ -3963,7 +3960,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1133, 149, 1231, 162]</P>
+    <P Name="Position">[1123, 149, 1221, 162]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -3992,7 +3989,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Helvetica&apos;; font-size:11px; font-style:italic; color:#000000;&quot;&gt;next phonemes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[625, 149, 702, 162]</P>
+    <P Name="Position">[615, 149, 692, 162]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
@@ -4061,7 +4058,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;next structure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[629, -396, 697, -383]</P>
+    <P Name="Position">[624, -396, 692, -383]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -4090,7 +4087,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Helvetica&apos;; font-size:11px; font-style:italic; color:#000000;&quot;&gt;tonic signals&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1647, 119, 1709, 132]</P>
+    <P Name="Position">[1615, 9, 1677, 22]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
@@ -4103,7 +4100,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;transient signals&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1647, 132, 1728, 145]</P>
+    <P Name="Position">[1615, 22, 1696, 35]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -4131,9 +4128,8 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;somatosensory/auditory &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;feedback&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1126, -122, 1247, -98]</P>
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;somatosensory/auditory feedback&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1089, -141, 1256, -128]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -4147,7 +4143,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; font-style:italic; color:#808080;&quot;&gt;signal to&lt;/span&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt; start utterance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[89, -572, 209, -558]</P>
+    <P Name="Position">[86, -555, 206, -541]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -4160,9 +4156,8 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phoneme durations&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;in next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[1127, -397, 1236, -373]</P>
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px; font-style:italic; color:#808080;&quot;&gt;phoneme durations in next motor program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1099, -397, 1305, -384]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="BackgroundColor">automatic</P>
@@ -4207,17 +4202,16 @@ p, li { white-space: pre-wrap; }
 
 
  </P>
-    <P Name="Position">[884, -129, 998, -77]</P>
+    <P Name="Position">[884, -159, 998, -107]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">gray</P>
-    <P Name="DropShadow">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
     <P Name="ZOrder">-3</P>
   </Annotation>
   <Annotation SID="398">
     <P Name="Name">to debug the model use the syntax: global GODIVA_x; GODIVA_x.control.pause=true;</P>
-    <P Name="Position">[1605, -22, 1985, -10]</P>
+    <P Name="Position">[1605, 42, 1985, 54]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="ForegroundColor">gray</P>
     <P Name="ZOrder">-4</P>
@@ -4278,13 +4272,96 @@ p, li { white-space: pre-wrap; }
 
 
                        </P>
-    <P Name="Position">[1249, -552, 1536, 292]</P>
+    <P Name="Position">[1179, -612, 1536, 262]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="FixedHeight">on</P>
     <P Name="FixedWidth">on</P>
-    <P Name="BackgroundColor">[0.964706, 0.964706, 0.964706]</P>
+    <P Name="BackgroundColor">[0.913725, 0.909804, 0.898039]</P>
     <P Name="ZOrder">-78</P>
     <P Name="FontName">Arial Narrow</P>
+  </Annotation>
+  <Annotation SID="482">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Thalamus&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[256, -105, 319, -89]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="FontSize">14</P>
+  </Annotation>
+  <Annotation SID="483">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Thalamus&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[781, -105, 844, -89]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="FontSize">14</P>
+  </Annotation>
+  <Annotation SID="484">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Basal Ganglia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[372, -105, 461, -89]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="FontSize">14</P>
+  </Annotation>
+  <Annotation SID="485">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Basal Ganglia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[896, -105, 985, -89]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-4</P>
+    <P Name="FontSize">14</P>
+  </Annotation>
+  <Annotation SID="487">
+    <P Name="Name">                                                                                                                 
+
+
+
+ </P>
+    <P Name="Position">[756, -159, 865, -107]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="ZOrder">-5</P>
+  </Annotation>
+  <Annotation SID="488">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;center&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;vMC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1349, 180, 1379, 196]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ForegroundColor">gray</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-6</P>
+    <P Name="FontSize">14</P>
   </Annotation>
 </System>
 
@@ -4306,7 +4383,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
         <P Name="Visible" Class="logical">1</P>
       </Object>
-      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*38">
+      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*40">
         <Object ObjectID="5">
           <P Name="IsActive" Class="logical">1</P>
           <P Name="IsTabbed" Class="logical">1</P>
@@ -4314,10 +4391,40 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="LoadSaveID" Class="char">0</P>
           <P Name="Extents" Class="double">[1882.0, 887.0]</P>
           <P Name="ZoomFactor" Class="double">0.85942128707492838</P>
-          <P Name="Offset" Class="double">[-80.4072191882417, -665.04493240965485]</P>
-          <P Name="SceneRectInView" Class="double">[-80.4072191882417, -665.04493240965485, 2189.8456883764834, 1032.0898648193097]</P>
+          <P Name="Offset" Class="double">[-80.4072191882417, -676.04493240965485]</P>
+          <P Name="SceneRectInView" Class="double">[-80.4072191882417, -676.04493240965485, 2189.8456883764834, 1032.0898648193097]</P>
         </Object>
         <Object ObjectID="6">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">492</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-835.5, -401.0]</P>
+          <P Name="SceneRectInView" Class="double">[-835.5, -401.0, 1882.0, 887.0]</P>
+        </Object>
+        <Object ObjectID="7">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">489</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-835.5, -401.0]</P>
+          <P Name="SceneRectInView" Class="double">[-835.5, -401.0, 1882.0, 887.0]</P>
+        </Object>
+        <Object ObjectID="8">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">352</P>
+          <P Name="Extents" Class="double">[1882.0, 887.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-835.5, -401.5]</P>
+          <P Name="SceneRectInView" Class="double">[-835.5, -401.5, 1882.0, 887.0]</P>
+        </Object>
+        <Object ObjectID="9">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4327,7 +4434,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-64.333235866559932, 54.610011641443549]</P>
           <P Name="SceneRectInView" Class="double">[-64.333235866559932, 54.610011641443549, 455.71129220023283, 214.7799767171129]</P>
         </Object>
-        <Object ObjectID="7">
+        <Object ObjectID="10">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4337,7 +4444,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-64.527322710951552, -13.213644524236997]</P>
           <P Name="SceneRectInView" Class="double">[-64.527322710951552, -13.213644524236997, 435.8671454219031, 205.427289048474]</P>
         </Object>
-        <Object ObjectID="8">
+        <Object ObjectID="11">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4347,7 +4454,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-321.20540915395253, -106.86574202496536]</P>
           <P Name="SceneRectInView" Class="double">[-321.20540915395253, -106.86574202496536, 1505.6, 709.6]</P>
         </Object>
-        <Object ObjectID="9">
+        <Object ObjectID="12">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4357,7 +4464,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-98.910766961651944, -47.85619469026549]</P>
           <P Name="SceneRectInView" Class="double">[-98.910766961651944, -47.85619469026549, 470.5, 221.75]</P>
         </Object>
-        <Object ObjectID="10">
+        <Object ObjectID="13">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4367,7 +4474,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-71.9774541531823, -73.437478810294351]</P>
           <P Name="SceneRectInView" Class="double">[-71.9774541531823, -73.437478810294351, 1882.0, 887.0]</P>
         </Object>
-        <Object ObjectID="11">
+        <Object ObjectID="14">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4377,7 +4484,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-302.0829725829721, -198.27503607503604]</P>
           <P Name="SceneRectInView" Class="double">[-302.0829725829721, -198.27503607503604, 941.0, 443.5]</P>
         </Object>
-        <Object ObjectID="12">
+        <Object ObjectID="15">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4387,7 +4494,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-835.5, -355.0]</P>
           <P Name="SceneRectInView" Class="double">[-835.5, -355.0, 1882.0, 794.0]</P>
         </Object>
-        <Object ObjectID="13">
+        <Object ObjectID="16">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4397,7 +4504,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[21.273478494910862, 5.9798803697661782]</P>
           <P Name="SceneRectInView" Class="double">[21.273478494910862, 5.9798803697661782, 237.45304301017828, 100.17944535073408]</P>
         </Object>
-        <Object ObjectID="14">
+        <Object ObjectID="17">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4407,7 +4514,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-0.083333333333314386, -9.4166666666666856]</P>
           <P Name="SceneRectInView" Class="double">[-0.083333333333314386, -9.4166666666666856, 313.66666666666669, 132.33333333333334]</P>
         </Object>
-        <Object ObjectID="15">
+        <Object ObjectID="18">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4417,7 +4524,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[23.250620347394545, -6.2555831265508672]</P>
           <P Name="SceneRectInView" Class="double">[23.250620347394545, -6.2555831265508672, 233.49875930521091, 98.511166253101734]</P>
         </Object>
-        <Object ObjectID="16">
+        <Object ObjectID="19">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4427,7 +4534,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-97.75, -36.75]</P>
           <P Name="SceneRectInView" Class="double">[-97.75, -36.75, 470.5, 198.5]</P>
         </Object>
-        <Object ObjectID="17">
+        <Object ObjectID="20">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4437,7 +4544,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-711.0, -343.0]</P>
           <P Name="SceneRectInView" Class="double">[-711.0, -343.0, 1882.0, 794.0]</P>
         </Object>
-        <Object ObjectID="18">
+        <Object ObjectID="21">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">StateflowChart</P>
@@ -4447,7 +4554,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[0.0, 0.0]</P>
           <P Name="SceneRectInView" Class="double">[0.0, 0.0, 0.0, 0.0]</P>
         </Object>
-        <Object ObjectID="19">
+        <Object ObjectID="22">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4457,7 +4564,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-474.9834172963898, -239.594458438287]</P>
           <P Name="SceneRectInView" Class="double">[-474.9834172963898, -239.594458438287, 1254.6666666666667, 529.33333333333337]</P>
         </Object>
-        <Object ObjectID="20">
+        <Object ObjectID="23">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4467,7 +4574,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-87.817745415318285, -51.642448759439119]</P>
           <P Name="SceneRectInView" Class="double">[-87.817745415318285, -51.642448759439119, 470.5, 198.5]</P>
         </Object>
-        <Object ObjectID="21">
+        <Object ObjectID="24">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4477,7 +4584,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-334.39798488664991, -157.0]</P>
           <P Name="SceneRectInView" Class="double">[-334.39798488664991, -157.0, 949.29596977329982, 400.5]</P>
         </Object>
-        <Object ObjectID="22">
+        <Object ObjectID="25">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4487,17 +4594,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-801.0, -249.0]</P>
           <P Name="SceneRectInView" Class="double">[-801.0, -249.0, 1882.0, 585.0]</P>
         </Object>
-        <Object ObjectID="23">
-          <P Name="IsActive" Class="logical">0</P>
-          <P Name="IsTabbed" Class="logical">0</P>
-          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">352</P>
-          <P Name="Extents" Class="double">[1882.0, 794.0]</P>
-          <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-835.5, -355.0]</P>
-          <P Name="SceneRectInView" Class="double">[-835.5, -355.0, 1882.0, 794.0]</P>
-        </Object>
-        <Object ObjectID="24">
+        <Object ObjectID="26">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4507,7 +4604,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-1984.166666666667, -737.00000000000011]</P>
           <P Name="SceneRectInView" Class="double">[-1984.166666666667, -737.00000000000011, 3764.0000000000005, 1588.0000000000002]</P>
         </Object>
-        <Object ObjectID="25">
+        <Object ObjectID="27">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4517,7 +4614,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-449.83333333333337, -154.66666666666666]</P>
           <P Name="SceneRectInView" Class="double">[-449.83333333333337, -154.66666666666666, 1254.6666666666667, 390.0]</P>
         </Object>
-        <Object ObjectID="26">
+        <Object ObjectID="28">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4527,7 +4624,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-130.7402088772846, 12.900783289817241]</P>
           <P Name="SceneRectInView" Class="double">[-130.7402088772846, 12.900783289817241, 685.4804177545692, 289.19843342036552]</P>
         </Object>
-        <Object ObjectID="27">
+        <Object ObjectID="29">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4537,7 +4634,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-646.89999999999986, -193.29999999999998]</P>
           <P Name="SceneRectInView" Class="double">[-646.89999999999986, -193.29999999999998, 1505.6, 468.0]</P>
         </Object>
-        <Object ObjectID="28">
+        <Object ObjectID="30">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4547,7 +4644,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-895.05882352941171, -309.55882352941177]</P>
           <P Name="SceneRectInView" Class="double">[-895.05882352941171, -309.55882352941177, 2214.1176470588234, 934.11764705882354]</P>
         </Object>
-        <Object ObjectID="29">
+        <Object ObjectID="31">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4557,7 +4654,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-289.0, -160.0]</P>
           <P Name="SceneRectInView" Class="double">[-289.0, -160.0, 933.5, 400.5]</P>
         </Object>
-        <Object ObjectID="30">
+        <Object ObjectID="32">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4567,7 +4664,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -242.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 592.0]</P>
         </Object>
-        <Object ObjectID="31">
+        <Object ObjectID="33">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4577,7 +4674,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-698.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-698.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="32">
+        <Object ObjectID="34">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4587,7 +4684,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -242.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -242.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="33">
+        <Object ObjectID="35">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4597,7 +4694,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-698.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-698.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="34">
+        <Object ObjectID="36">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4607,7 +4704,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-883.227272727273, -297.04545454545462]</P>
           <P Name="SceneRectInView" Class="double">[-883.227272727273, -297.04545454545462, 2121.5909090909095, 910.22727272727286]</P>
         </Object>
-        <Object ObjectID="35">
+        <Object ObjectID="37">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4617,7 +4714,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-683.0, -290.0]</P>
           <P Name="SceneRectInView" Class="double">[-683.0, -290.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="36">
+        <Object ObjectID="38">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4627,7 +4724,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-703.0, -346.0]</P>
           <P Name="SceneRectInView" Class="double">[-703.0, -346.0, 1867.0, 801.0]</P>
         </Object>
-        <Object ObjectID="37">
+        <Object ObjectID="39">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4637,7 +4734,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[23.24904839586732, -7.0897226753670424]</P>
           <P Name="SceneRectInView" Class="double">[23.24904839586732, -7.0897226753670424, 233.50190320826536, 100.17944535073408]</P>
         </Object>
-        <Object ObjectID="38">
+        <Object ObjectID="40">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4647,7 +4744,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-548.80000000000007, -268.8]</P>
           <P Name="SceneRectInView" Class="double">[-548.80000000000007, -268.8, 1493.6, 640.8]</P>
         </Object>
-        <Object ObjectID="39">
+        <Object ObjectID="41">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4657,7 +4754,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-177.83217905405388, 27.065146396396287]</P>
           <P Name="SceneRectInView" Class="double">[-177.83217905405388, 27.065146396396287, 622.33333333333337, 267.0]</P>
         </Object>
-        <Object ObjectID="40">
+        <Object ObjectID="42">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4667,7 +4764,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[22.944535073409469, -15.399011011419248]</P>
           <P Name="SceneRectInView" Class="double">[22.944535073409469, -15.399011011419248, 274.11092985318106, 117.60195758564436]</P>
         </Object>
-        <Object ObjectID="41">
+        <Object ObjectID="43">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4677,7 +4774,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Offset" Class="double">[-517.44285714285672, -171.56190476190474]</P>
           <P Name="SceneRectInView" Class="double">[-517.44285714285672, -171.56190476190474, 1244.6666666666667, 394.66666666666669]</P>
         </Object>
-        <Object ObjectID="42">
+        <Object ObjectID="44">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
@@ -4689,19 +4786,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
         </Object>
       </Array>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
-        <Object ObjectID="43">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
-        <Object ObjectID="44">
+        <Object ObjectID="45">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -4710,6 +4795,18 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
 </P>
           <P Name="Floating" Class="logical">0</P>
           <P Name="DockPosition" Class="char">Left</P>
+          <P Name="Width" Class="int32">640</P>
+          <P Name="Height" Class="int32">480</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="46">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
           <P Name="Width" Class="int32">640</P>
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">Unset</P>
